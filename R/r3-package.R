@@ -1,4 +1,6 @@
 #' @keywords internal
+#' @importFrom usethis ui_todo ui_line ui_done ui_oops ui_info ui_stop ui_warn
+#'   ui_field ui_value ui_path ui_code
 "_PACKAGE"
 
 # The following block is used by usethis to automatically manage

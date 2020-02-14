@@ -1,5 +1,6 @@
 Package: r3
-Title: Companion Package for the R3 Introduction to R Course.
+Title: Companion Package for the R3 Introduction to R
+    Course
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Luke",
@@ -7,9 +8,18 @@ Authors@R:
            role = c("aut", "cre"),
            email = "lwjohnst@gmail.com",
            comment = c(ORCID = "0000-0003-4169-2616"))
-Description: Contains the helper functions and other files to make it easier for
-    learners during (and after) the course.
+Description: Contains the helper functions and other files to
+    make it easier for learners during (and after) the course.
 License: MIT + file LICENSE
+Imports: 
+    prodigenr,
+    rstudioapi,
+    rversions,
+    tidyverse,
+    usethis,
+    utils,
+    stringr,
+    git2r
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

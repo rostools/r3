@@ -4,3 +4,6 @@
 ^README\.Rmd$
 ^\.gitlab$
 ^\.gitlab-ci\.yml$
+^data-raw$
+^CODE_OF_CONDUCT\.md$
+^CONTRIBUTING\.md$
