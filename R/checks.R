@@ -11,7 +11,7 @@ check_r_version <- function() {
         ui_line("Opening the R download page in a browser...")
         open_link(cran_link)
     } else {
-        ui_done("Your R is at the latest version!")
+        ui_done("Your R is at the latest version, {current_version}!")
     }
     return(invisible())
 }
@@ -23,7 +23,7 @@ check_rstudio_version <- function() {
         ui_line("Opening the RStudio download page in a browser...")
         open_link(rstudio_dl_link)
     } else {
-        ui_done("Your RStudio is at the latest version!")
+        ui_done("Your RStudio is at the latest version, {rstudioapi::getVersion()}!")
     }
     return(invisible())
 
@@ -47,7 +47,14 @@ check_git_config <- function() {
         ui_todo("Please paste and run the below code in the RStudio Console.")
         ui_code_block("r3::setup_git_config()")
     } else {
-        ui_done("Your Git configuration is all setup!")
+        ui_done(
+            c(
+                "Your Git configuration is all setup!",
+                "Git now knows that:",
+                "- Your name is {ui_value(git_config_values$name)}",
+                "- Your email is {ui_value(git_config_values$email)}"
+            )
+        )
     }
 
     return(invisible())
