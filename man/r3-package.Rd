@@ -5,7 +5,7 @@
 \alias{r3}
 \alias{r3-package}
 \title{r3: Companion Package for the R3 Introduction to R
-    Course.}
+    Course}
 \description{
 Contains the helper functions and other files to
     make it easier for learners during (and after) the course.
