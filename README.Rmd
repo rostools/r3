@@ -19,7 +19,8 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of r3 is to ...
+The goal of r3 is to provide helper functions for the r-cubed introduction to R
+course.
 
 ## Installation
 
@@ -28,15 +29,6 @@ You can install the released version of r3 from GitLab with:
 ``` r
 # install.packages("remotes")
 remotes::install_gitlab("rostools/r3")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(r3)
-## basic example code
 ```
 
 ## Code of Conduct
