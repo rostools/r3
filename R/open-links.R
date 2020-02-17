@@ -76,7 +76,3 @@ open_assignment <- function() {
 open_precourse_tasks <- function() {
     open_chapter("pre-course")
 }
-
-open_precourse_links <- function() {
-}
-
