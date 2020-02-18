@@ -51,7 +51,31 @@ open_chapter <- function(chapter) {
 #' @describeIn open_url Function to take you right to Project Management session.
 #' @export
 open_proj_management <- function() {
-    open_chapter("proj-management")
+    open_chapter("project-management")
+}
+
+#' @describeIn open_url Function to take you right to Version Control session.
+#' @export
+open_proj_management <- function() {
+    open_chapter("version-control")
+}
+
+#' @describeIn open_url Function to take you right to Data Management and Wrangling session.
+#' @export
+open_proj_management <- function() {
+    open_chapter("wrangling")
+}
+
+#' @describeIn open_url Function to take you right to Data Visualization session.
+#' @export
+open_proj_management <- function() {
+    open_chapter("visualization")
+}
+
+#' @describeIn open_url Function to take you right to Reproducible Documents session.
+#' @export
+open_proj_management <- function() {
+    open_chapter("reproducible-documents")
 }
 
 #' @describeIn open_url Opens the Code of Conduct webpage.
