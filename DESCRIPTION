@@ -22,7 +22,8 @@ Imports:
     git2r,
     NHANES,
     rmarkdown,
-    knitr
+    knitr,
+    crayon
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
