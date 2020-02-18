@@ -1,5 +1,6 @@
 material_link <- "https://r-cubed.rostools.org/"
 website_link <- "https://dda-rcourse.lwjohnst.com/"
+pre_survey_link <- "https://docs.google.com/forms/d/e/1FAIpQLSeuMe485zZXlG9uQlUgcgsWBJvpHUB_-bMVkEtA4moWK_oUoQ/viewform?usp=sf_link"
 
 open_link <- function(link) {
     utils::browseURL(link)
@@ -38,7 +39,7 @@ open_github <- function() {
 #' @describeIn open_url Opens pre-course survey.
 #' @export
 open_pre_survey <- function() {
-    open_link()
+    open_link(pre_survey_link)
 }
 
 # Chapters ----------------------------------------------------------------
