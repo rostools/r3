@@ -8,6 +8,10 @@
 \alias{open_github}
 \alias{open_pre_survey}
 \alias{open_proj_management}
+\alias{open_version_control}
+\alias{open_wrangling}
+\alias{open_visualization}
+\alias{open_reproducible_documents}
 \alias{open_code_of_conduct}
 \alias{open_syllabus}
 \alias{open_assignment}
@@ -24,6 +28,14 @@ open_github()
 open_pre_survey()
 
 open_proj_management()
+
+open_version_control()
+
+open_wrangling()
+
+open_visualization()
+
+open_reproducible_documents()
 
 open_code_of_conduct()
 
@@ -47,6 +59,14 @@ Opens a browser to course resources.
 \item \code{open_pre_survey}: Opens pre-course survey.
 
 \item \code{open_proj_management}: Function to take you right to Project Management session.
+
+\item \code{open_version_control}: Function to take you right to Version Control session.
+
+\item \code{open_wrangling}: Function to take you right to Data Management and Wrangling session.
+
+\item \code{open_visualization}: Function to take you right to Data Visualization session.
+
+\item \code{open_reproducible_documents}: Function to take you right to Reproducible Documents session.
 
 \item \code{open_code_of_conduct}: Opens the Code of Conduct webpage.
 
