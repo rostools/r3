@@ -31,6 +31,11 @@ check_rstudio_version <- function() {
     # Use gh package for this..?
 }
 
+#' Checks your computer's Git config settings.
+#'
+#' @return Prints config settings to screen.
+#' @export
+#'
 check_git_config <- function() {
     git_config_values <- list(
         name = get_git_config("user.name"),
