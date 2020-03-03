@@ -3,13 +3,11 @@ cran_link <- "https://cran.r-project.org/"
 rstudio_dl_link <- "https://rstudio.com/products/rstudio/download/#download"
 
 check_r_version <- function() {
-    latest_version <- rversions::r_release()$version
+    latest_version <- tail(rversions::r_versions()$version, 4)
     current_version <- getRversion()
-    if (latest_version != current_version) {
-        ui_oops("Your version of R is {current_version}, but the latest is {latest_version}.")
+    if (current_version %in% latest_version) {
+        ui_oops("Your version of R is {current_version}, but you need at least {latest_version[1]}.")
         ui_todo("You need to update your R version, please download the newest version at {ui_value(cran_link)}.")
-        ui_line("Opening the R download page in a browser...")
-        open_link(cran_link)
     } else {
         ui_done("Your R is at the latest version, {current_version}!")
     }
@@ -17,11 +15,9 @@ check_r_version <- function() {
 }
 
 check_rstudio_version <- function() {
-    if (!rstudioapi::isAvailable("1.2.5033")) {
-        ui_oops("Your version of RStudio is {rstudioapi::getVersion()}, but the latest is 1.2.5033.")
+    if (!rstudioapi::isAvailable("1.2.5001")) {
+        ui_oops("Your version of RStudio is {rstudioapi::getVersion()}, but you need at least 1.2.5001.")
         ui_todo("Please update your RStudio at {ui_value(rstudio_dl_link)}.")
-        ui_line("Opening the RStudio download page in a browser...")
-        open_link(rstudio_dl_link)
     } else {
         ui_done("Your RStudio is at the latest version, {rstudioapi::getVersion()}!")
     }
