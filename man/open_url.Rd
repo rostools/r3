@@ -9,8 +9,8 @@
 \alias{open_pre_survey}
 \alias{open_proj_management}
 \alias{open_version_control}
-\alias{open_wrangling}
-\alias{open_visualization}
+\alias{open_data_wrangling}
+\alias{open_data_visualization}
 \alias{open_reproducible_documents}
 \alias{open_code_of_conduct}
 \alias{open_syllabus}
@@ -31,9 +31,9 @@ open_proj_management()
 
 open_version_control()
 
-open_wrangling()
+open_data_wrangling()
 
-open_visualization()
+open_data_visualization()
 
 open_reproducible_documents()
 
@@ -62,9 +62,9 @@ Opens a browser to course resources.
 
 \item \code{open_version_control}: Function to take you right to Version Control session.
 
-\item \code{open_wrangling}: Function to take you right to Data Management and Wrangling session.
+\item \code{open_data_wrangling}: Function to take you right to Data Management and Wrangling session.
 
-\item \code{open_visualization}: Function to take you right to Data Visualization session.
+\item \code{open_data_visualization}: Function to take you right to Data Visualization session.
 
 \item \code{open_reproducible_documents}: Function to take you right to Reproducible Documents session.
 
