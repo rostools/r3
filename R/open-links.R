@@ -63,13 +63,13 @@ open_version_control <- function() {
 
 #' @describeIn open_url Function to take you right to Data Management and Wrangling session.
 #' @export
-open_wrangling <- function() {
+open_data_wrangling <- function() {
     open_chapter("wrangling")
 }
 
 #' @describeIn open_url Function to take you right to Data Visualization session.
 #' @export
-open_visualization <- function() {
+open_data_visualization <- function() {
     open_chapter("visualization")
 }
 
