@@ -27,29 +27,56 @@ useful_pkgs <- c(
     "glue",
     "janitor",
     "usethis",
-    "broom"
+    "broom",
+    "fs",
+    "here",
+    "knitr",
+    "bookdown"
 )
 
 package_metadata <- useful_pkgs %>%
     stringr::str_sort() %>%
     pkgsearch::cran_packages()
 
+useful_packages_list <- package_metadata %>%
+    select(Package, Title, Description, URL) %>%
+    mutate(
+        URL = str_remove(URL, ",[\\n]?.*$") %>%
+            str_remove(",.*$") %>%
+            str_replace("http:", "https:"),
+        Package = glue::glue("[{Package}]({URL})")
+    ) %>%
+    select(-URL)
 
-usethis::use_data(DATASET, overwrite = TRUE)
-
+usethis::use_data(useful_packages_list, overwrite = TRUE)
 
 # Useful websites ---------------------------------------------------------
 
-"https://awesome-r.com/"
+library(rvest)
 
-"https://swirlstats.com/"
+useful_learning_sites <- c(
+    "https://awesome-r.com/",
+    "https://swirlstats.com/",
+    "https://r4ds.had.co.nz/",
+    "https://rstudio.com/resources/cheatsheets/",
+    "https://moderndive.com/",
+    "https://serialmentor.com/dataviz/",
+    "https://stat545.com/",
+    "https://rstudio.cloud/learn/primers"
+)
 
-"https://r4ds.had.co.nz/"
+extract_title <- function(content, link_name) {
+    page_title <- content %>%
+        html_node("title") %>%
+        html_text()
+    tibble(Site = as.character(glue::glue("[{page_title}]({link_name})")))
+}
 
-"rstudio cheatsheets"
+site_contents <- useful_learning_sites %>%
+    map(read_html)
 
-"moderndive"
+useful_learning_sites_list <- site_contents %>%
+    map2_dfr(useful_learning_sites,
+             extract_title)
 
-"https://stat545.com/"
-
-"https://rstudio.cloud/learn/primers"
+usethis::use_data(useful_learning_sites_list, overwrite = TRUE)
