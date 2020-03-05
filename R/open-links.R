@@ -51,8 +51,8 @@ open_chapter <- function(chapter) {
 
 #' @describeIn open_url Function to take you right to Project Management session.
 #' @export
-open_proj_management <- function() {
-    open_chapter("project-management")
+open_rproject_management <- function() {
+    open_chapter("r-project-management")
 }
 
 #' @describeIn open_url Function to take you right to Version Control session.

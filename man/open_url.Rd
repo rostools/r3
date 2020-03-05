@@ -7,7 +7,7 @@
 \alias{open_schedule}
 \alias{open_github}
 \alias{open_pre_survey}
-\alias{open_proj_management}
+\alias{open_rproject_management}
 \alias{open_version_control}
 \alias{open_data_wrangling}
 \alias{open_data_visualization}
@@ -27,7 +27,7 @@ open_github()
 
 open_pre_survey()
 
-open_proj_management()
+open_rproject_management()
 
 open_version_control()
 
@@ -58,7 +58,7 @@ Opens a browser to course resources.
 
 \item \code{open_pre_survey}: Opens pre-course survey.
 
-\item \code{open_proj_management}: Function to take you right to Project Management session.
+\item \code{open_rproject_management}: Function to take you right to Project Management session.
 
 \item \code{open_version_control}: Function to take you right to Version Control session.
 
