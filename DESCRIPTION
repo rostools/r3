@@ -23,6 +23,7 @@ Imports:
     NHANES,
     rmarkdown,
     knitr,
+    here,
     crayon
 Encoding: UTF-8
 LazyData: true
