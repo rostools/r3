@@ -1,6 +1,5 @@
 Package: r3
-Title: Companion Package for the R3 Introduction to R
-    Course
+Title: Companion Package for the R3 Introduction to R Course
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Luke",
@@ -11,20 +10,21 @@ Authors@R:
 Description: Contains the helper functions and other files to
     make it easier for learners during (and after) the course.
 License: MIT + file LICENSE
+Depends: R (>= 3.6.0)
 Imports: 
+    crayon,
+    git2r,
+    here,
+    knitr,
+    NHANES,
     prodigenr,
+    rmarkdown,
     rstudioapi,
     rversions,
+    stringr,
     tidyverse,
     usethis,
-    utils,
-    stringr,
-    git2r,
-    NHANES,
-    rmarkdown,
-    knitr,
-    here,
-    crayon
+    utils
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
