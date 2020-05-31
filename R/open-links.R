@@ -32,7 +32,7 @@ open_schedule <- function() {
 
 #' @describeIn open_url Opens GitHub account creation website.
 #' @export
-open_github <- function() {
+open_github_join <- function() {
     open_link("https://github.com/join")
 }
 
