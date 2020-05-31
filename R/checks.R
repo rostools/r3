@@ -2,6 +2,14 @@
 cran_link <- "https://cran.r-project.org/"
 rstudio_dl_link <- "https://rstudio.com/products/rstudio/download/#download"
 
+#' Runs checks on your system for R, RStudio, and Git.
+#'
+#' @name check_system
+#' @return Prints information on given check.
+NULL
+
+#' @describeIn check_system Check version of R that is installed.
+#' @export
 check_r_version <- function() {
     latest_version <- tail(rversions::r_versions()$version, 4)
     current_version <- getRversion()
@@ -14,6 +22,8 @@ check_r_version <- function() {
     return(invisible())
 }
 
+#' @describeIn check_system Check version of RStudio that is installed.
+#' @export
 check_rstudio_version <- function() {
     if (!rstudioapi::isAvailable("1.2.5001")) {
         ui_oops("Your version of RStudio is {rstudioapi::getVersion()}, but you need at least 1.2.5001.")
@@ -27,11 +37,8 @@ check_rstudio_version <- function() {
     # Use gh package for this..?
 }
 
-#' Checks your computer's Git config settings.
-#'
-#' @return Prints config settings to screen.
+#' @describeIn check_system Checks your computer's Git config settings.
 #' @export
-#'
 check_git_config <- function() {
     git_config_values <- list(
         name = get_git_config("user.name"),
@@ -67,11 +74,8 @@ get_git_config <- function(name) {
     config$global[[name]]
 }
 
-#' Check your setup in preparation for the r-cubed course.
-#'
-#' @return Don't output anything, only runs checks on the setup.
+#' @describeIn check_system Check your setup in preparation for the r-cubed course.
 #' @export
-#'
 check_setup <- function() {
     hd_line("Checking R version:")
     check_r_version()
