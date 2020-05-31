@@ -5,7 +5,7 @@
 \alias{open_course_material}
 \alias{open_course_website}
 \alias{open_schedule}
-\alias{open_github}
+\alias{open_github_join}
 \alias{open_pre_survey}
 \alias{open_rproject_management}
 \alias{open_version_control}
@@ -23,7 +23,7 @@ open_course_website()
 
 open_schedule()
 
-open_github()
+open_github_join()
 
 open_pre_survey()
 
@@ -54,7 +54,7 @@ Opens a browser to course resources.
 
 \item \code{open_schedule}: Opens schedule for the DDA R course.
 
-\item \code{open_github}: Opens GitHub account creation website.
+\item \code{open_github_join}: Opens GitHub account creation website.
 
 \item \code{open_pre_survey}: Opens pre-course survey.
 

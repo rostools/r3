@@ -4,10 +4,12 @@
 \name{useful_learning_sites_list}
 \alias{useful_learning_sites_list}
 \title{List of some useful sites for learning R.}
-\format{A column with 8 rows and 1 variables:
+\format{
+A column with 8 rows and 1 variables:
 \describe{
 \item{Site}{List of learning sites, as a Markdown link.}
-}}
+}
+}
 \usage{
 useful_learning_sites_list
 }

@@ -4,12 +4,14 @@
 \name{useful_packages_list}
 \alias{useful_packages_list}
 \title{List of some useful packages to use in R.}
-\format{A column with 27 rows and 3 variables:
+\format{
+A column with 27 rows and 3 variables:
 \describe{
 \item{Package}{List of useful packages, as a Markdown link.}
 \item{Title}{Package title.}
 \item{Description}{Package description.}
-}}
+}
+}
 \usage{
 useful_packages_list
 }
