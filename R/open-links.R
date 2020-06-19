@@ -1,6 +1,5 @@
 material_link <- "https://r-cubed.rostools.org/"
 website_link <- "https://dda-rcourse.lwjohnst.com/"
-pre_survey_link <- "https://docs.google.com/forms/d/e/1FAIpQLSeuMe485zZXlG9uQlUgcgsWBJvpHUB_-bMVkEtA4moWK_oUoQ/viewform?usp=sf_link"
 
 open_link <- function(link) {
     utils::browseURL(link)
@@ -39,8 +38,15 @@ open_github_join <- function() {
 #' @describeIn open_url Opens pre-course survey.
 #' @export
 open_pre_survey <- function() {
-    open_link(pre_survey_link)
+    open_link("https://docs.google.com/forms/d/e/1FAIpQLSeuMe485zZXlG9uQlUgcgsWBJvpHUB_-bMVkEtA4moWK_oUoQ/viewform?usp=sf_link")
 }
+
+#' @describeIn open_url Opens daily feedback survey.
+#' @export
+open_feedback_survey <- function() {
+    open_link("https://docs.google.com/forms/d/e/1FAIpQLSdhvOl7ifRIQouuv4jZVldJTcyrCTy935PTnTUlCsoF9WA_zA/viewform?usp=sf_link")
+}
+
 
 # Chapters ----------------------------------------------------------------
 
