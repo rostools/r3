@@ -44,7 +44,8 @@ useful_packages_list <- package_metadata %>%
         URL = str_remove(URL, ",[\\n]?.*$") %>%
             str_remove(",.*$") %>%
             str_replace("http:", "https:"),
-        Package = glue::glue("[{Package}]({URL})")
+        Package = glue::glue("[{Package}]({URL})"),
+        Description = str_replace_all(Description, "\\n", " ")
     ) %>%
     select(-URL)
 
@@ -55,7 +56,6 @@ usethis::use_data(useful_packages_list, overwrite = TRUE)
 library(rvest)
 
 useful_learning_sites <- c(
-    "https://awesome-r.com/",
     "https://swirlstats.com/",
     "https://r4ds.had.co.nz/",
     "https://rstudio.com/resources/cheatsheets/",
