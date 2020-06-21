@@ -55,6 +55,12 @@ open_chapter <- function(chapter) {
     open_link(link)
 }
 
+#' @describeIn open_url Function to take you to the slides section.
+#' @export
+open_slides <- function() {
+    open_chapter("lecture-slides")
+}
+
 #' @describeIn open_url Function to take you right to Project Management session.
 #' @export
 open_rproject_management <- function() {
