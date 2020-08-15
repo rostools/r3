@@ -94,3 +94,16 @@ hd_line <- function(name) {
     }
     cat_line(crayon::bold(name))
 }
+
+#' @describeIn check_system Check your project setup for the files and folders created.
+#' @export
+check_project_setup <- function() {
+    proj <- rstudioapi::getActiveProject()
+    if (is.null(proj)) {
+        usethis::ui_stop("You aren't in the R project. Please open the R project for the course and run this function again.")
+    }
+    hd_line("Show folders and files of project:")
+    usethis::ui_todo("Please copy and paste this output into the survey question:")
+    file_tree <- fs::dir_tree(proj, recurse = TRUE)
+    return(invisible(file_tree))
+}
