@@ -1,6 +1,6 @@
 Package: r3
 Title: Companion Package for the R3 Courses
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: 
     person(given = "Luke",
            family = "Johnston",
@@ -26,8 +26,9 @@ Imports:
     usethis,
     utils,
     hexbin,
-    fs
+    fs,
+    vroom
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
