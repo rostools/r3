@@ -1,0 +1,4 @@
+name: Basic draft R Markdown doc
+description: >
+   Create a very basic R Markdown document.
+create_dir: FALSE
