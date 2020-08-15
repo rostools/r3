@@ -10,7 +10,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 The goal of r3 is to provide helper functions for the r-cubed
-introduction to R course.
+introduction to R course and the r-cubed-intermediate R course.
 
 ## Installation
 
@@ -18,7 +18,7 @@ You can install the released version of r3 from GitLab with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_gitlab("rostools/r3")
+remotes::install_gitlab("rostools/r3", upgrade = TRUE)
 ```
 
 ## Code of Conduct
