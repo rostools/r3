@@ -28,7 +28,8 @@ Imports:
     hexbin,
     fs,
     vroom,
-    furrr
+    furrr,
+    snakecase
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
