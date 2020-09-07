@@ -41,12 +41,17 @@ open_pre_survey <- function() {
     open_link("https://docs.google.com/forms/d/e/1FAIpQLSeuMe485zZXlG9uQlUgcgsWBJvpHUB_-bMVkEtA4moWK_oUoQ/viewform?usp=sf_link")
 }
 
-#' @describeIn open_url Opens daily feedback survey.
+#' @describeIn open_url Opens daily feedback survey for intro course.
 #' @export
-open_feedback_survey <- function() {
+open_feedback_survey_intro <- function() {
     open_link("https://docs.google.com/forms/d/e/1FAIpQLSdhvOl7ifRIQouuv4jZVldJTcyrCTy935PTnTUlCsoF9WA_zA/viewform?usp=sf_link")
 }
 
+#' @describeIn open_url Opens daily feedback survey for intermediate course.
+#' @export
+open_feedback_survey_intermediate <- function() {
+    open_link("https://docs.google.com/forms/d/e/1FAIpQLSd_C-enA4y8PNOehvpqbxBtknsRVzvIOCt_0fAGpDysJWb0FQ/viewform?usp=sf_link")
+}
 
 # Chapters ----------------------------------------------------------------
 
