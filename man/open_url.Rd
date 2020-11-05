@@ -7,7 +7,8 @@
 \alias{open_schedule}
 \alias{open_github_join}
 \alias{open_pre_survey}
-\alias{open_feedback_survey}
+\alias{open_feedback_survey_intro}
+\alias{open_feedback_survey_intermediate}
 \alias{open_slides}
 \alias{open_rproject_management}
 \alias{open_version_control}
@@ -29,7 +30,9 @@ open_github_join()
 
 open_pre_survey()
 
-open_feedback_survey()
+open_feedback_survey_intro()
+
+open_feedback_survey_intermediate()
 
 open_slides()
 
@@ -64,7 +67,9 @@ Opens a browser to course resources.
 
 \item \code{open_pre_survey}: Opens pre-course survey.
 
-\item \code{open_feedback_survey}: Opens daily feedback survey.
+\item \code{open_feedback_survey_intro}: Opens daily feedback survey for intro course.
+
+\item \code{open_feedback_survey_intermediate}: Opens daily feedback survey for intermediate course.
 
 \item \code{open_slides}: Function to take you to the slides section.
 
