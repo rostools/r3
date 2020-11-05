@@ -29,7 +29,7 @@ check_rstudio_version <- function() {
         ui_oops("Your version of RStudio is {rstudioapi::getVersion()}, but you need at least 1.2.5001.")
         ui_todo("Please update your RStudio at {ui_value(rstudio_dl_link)}.")
     } else {
-        ui_done("Your RStudio is at the latest version, {rstudioapi::getVersion()}!")
+        ui_done("Your RStudio is at the latest version of {rstudioapi::getVersion()}!")
     }
     return(invisible())
 
