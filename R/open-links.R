@@ -1,5 +1,4 @@
 material_link <- "https://r-cubed.rostools.org/"
-website_link <- "https://dda-rcourse.lwjohnst.com/"
 
 open_link <- function(link) {
     utils::browseURL(link)
@@ -16,16 +15,10 @@ open_course_material <- function() {
     open_link(material_link)
 }
 
-#' @describeIn open_url Opens website for DDA R course, March 2020.
-#' @export
-open_course_website <- function() {
-    open_link(website_link)
-}
-
-#' @describeIn open_url Opens schedule for the DDA R course.
+#' @describeIn open_url Opens schedule for the Intro to R3 course.
 #' @export
 open_schedule <- function() {
-    link <- paste0(website_link, "#schedule")
+    link <- paste0(material_link, "syllabus.html#general-schedule")
     open_link(link)
 }
 
