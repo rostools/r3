@@ -60,7 +60,7 @@ useful_learning_sites <- c(
     "https://r4ds.had.co.nz/",
     "https://rstudio.com/resources/cheatsheets/",
     "https://moderndive.com/",
-    "https://serialmentor.com/dataviz/",
+    "https://clauswilke.com/dataviz/",
     "https://stat545.com/",
     "https://rstudio.cloud/learn/primers"
 )
