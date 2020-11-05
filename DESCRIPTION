@@ -23,6 +23,7 @@ Imports:
     rversions,
     stringr,
     tidyverse,
+    dplyr,
     usethis,
     utils,
     hexbin,

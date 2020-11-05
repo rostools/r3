@@ -3,7 +3,6 @@
 \name{open_url}
 \alias{open_url}
 \alias{open_course_material}
-\alias{open_course_website}
 \alias{open_schedule}
 \alias{open_github_join}
 \alias{open_pre_survey}
@@ -21,8 +20,6 @@
 \title{Opens a browser to course resources.}
 \usage{
 open_course_material()
-
-open_course_website()
 
 open_schedule()
 
@@ -59,9 +56,7 @@ Opens a browser to course resources.
 \itemize{
 \item \code{open_course_material}: Opens website for course material.
 
-\item \code{open_course_website}: Opens website for DDA R course, March 2020.
-
-\item \code{open_schedule}: Opens schedule for the DDA R course.
+\item \code{open_schedule}: Opens schedule for the Intro to R3 course.
 
 \item \code{open_github_join}: Opens GitHub account creation website.
 
