@@ -102,6 +102,10 @@ check_project_setup <- function() {
     if (is.null(proj)) {
         usethis::ui_stop("You aren't in the R project. Please open the R project for the course and run this function again.")
     }
+    if (!(fs::file_exists(fs::path(proj, "data-raw", "mmash-data.zip")) &
+          fs::dir_exists(fs::path(proj, "data-raw", "mmash")))) {
+        usethis::ui_stop("The mmash folder and mmash-data don't exist. Please follow the instructions to download and unzip the dataset.")
+    }
     hd_line("Show folders and files of project:")
     usethis::ui_todo("Please copy and paste this output into the survey question:")
     file_tree <- fs::dir_tree(proj, recurse = TRUE)
