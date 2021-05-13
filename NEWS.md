@@ -1,4 +1,4 @@
-# r3 0.1.0.9000
+# r3 0.2.0
 
 * Added a `NEWS.md` file to track changes to the package.
 * Set minimum R version as 4.0.0 and RStudio to >1.3.
