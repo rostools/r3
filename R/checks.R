@@ -11,7 +11,7 @@ NULL
 #' @describeIn check_system Check version of R that is installed.
 #' @export
 check_r_version <- function() {
-    latest_version <- dplyr::filter(rversions::r_versions(), version > "3.6.0")$version
+    latest_version <- dplyr::filter(rversions::r_versions(), version > "4.0.0")$version
     current_version <- getRversion()
     if (current_version %in% latest_version) {
         ui_oops("Your version of R is {current_version}, but you need at least {latest_version[1]}.")
@@ -19,19 +19,19 @@ check_r_version <- function() {
     } else {
         ui_done("Your R is at the latest version of {current_version}!")
     }
-    return(invisible())
+    return(invisible(NULL))
 }
 
 #' @describeIn check_system Check version of RStudio that is installed.
 #' @export
 check_rstudio_version <- function() {
-    if (!rstudioapi::isAvailable("1.2.5001")) {
-        ui_oops("Your version of RStudio is {rstudioapi::getVersion()}, but you need at least 1.2.5001.")
-        ui_todo("Please update your RStudio at {ui_value(rstudio_dl_link)}.")
+    if (!rstudioapi::isAvailable("1.3.1093")) {
+        cli::cli_alert_danger("Your version of RStudio is {rstudioapi::getVersion()}, but you need at least 1.3.1093.")
+        cli::cli_ul("Please update your RStudio at {.val {rstudio_dl_link}}.")
     } else {
         ui_done("Your RStudio is at the latest version of {rstudioapi::getVersion()}!")
     }
-    return(invisible())
+    return(invisible(NULL))
 
     # gh::gh("/repos/:owner/:repo/releases/", owner = "rstudio", repo = "rstudio")
     # Use gh package for this..?
