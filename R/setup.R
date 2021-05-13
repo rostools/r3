@@ -16,6 +16,7 @@ setup_git_config <- function() {
     usethis::use_git_config(
         "user",
         user.name = user_name,
-        user.email = user_email
+        user.email = user_email,
+        init.defaultBranch = "main"
     )
 }
