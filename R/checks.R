@@ -65,7 +65,7 @@ check_git_config <- function() {
         )
     }
 
-    return(invisible())
+    return(invisible(NULL))
 }
 
 # Taken from usethis:::git_config_get
@@ -83,7 +83,7 @@ check_setup <- function() {
     check_rstudio_version()
     hd_line("Checking Git config settings:")
     check_git_config()
-    return(invisible())
+    return(invisible(NULL))
 }
 
 # From usethis:::hd_line
