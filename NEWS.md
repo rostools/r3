@@ -1,5 +1,10 @@
 # r3 0.2.1
 
+* Fix link to dataset.
+* Remove extra commas from the Git setup (it was confusing some people) (#10).
+* Checking the project folder structure was going too deep, changed recurse to 2
+levels only (#11).
+
 # r3 0.2.0
 
 * Added a `NEWS.md` file to track changes to the package.
