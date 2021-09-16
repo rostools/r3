@@ -100,7 +100,7 @@ hd_line <- function(name) {
 check_project_setup <- function() {
     proj <- rstudioapi::getActiveProject()
     if (is.null(proj)) {
-        usethis::ui_stop("You aren't in the R project. Please open the R project for the course and run this function again.")
+        usethis::ui_stop("You aren't in the R project. Please open the R Project for the course and run this function again in the Console.")
     }
     if (!(fs::file_exists(fs::path(proj, "data-raw", "mmash-data.zip")) &
           fs::dir_exists(fs::path(proj, "data-raw", "mmash")))) {
