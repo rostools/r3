@@ -108,6 +108,6 @@ check_project_setup <- function() {
     }
     hd_line("Show folders and files of project:")
     usethis::ui_todo("Please copy and paste this output into the survey question:")
-    file_tree <- fs::dir_tree(proj, recurse = 3)
+    file_tree <- fs::dir_tree(proj, recurse = 2)
     return(invisible(file_tree))
 }
