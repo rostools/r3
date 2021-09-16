@@ -7,7 +7,7 @@
 setup_git_config <- function() {
     user_name <- rstudioapi::showPrompt(
         "What is your name?",
-        "Please type out your full name (e.g. first, middle, last)."
+        "Please type out your full name (e.g. first middle last)."
     )
     user_email <- rstudioapi::showPrompt(
         "What is your email?",
