@@ -1,5 +1,7 @@
 # r3 (development version)
 
+* Removed many of the `open_*` functions, don't really need them
+
 # r3 0.2.1
 
 * Fix link to dataset.
