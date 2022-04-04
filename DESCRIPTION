@@ -29,12 +29,14 @@ Imports:
     hexbin,
     fs,
     vroom,
-    furrr,
     snakecase,
-    cli,
-    readr,
-    whisker
+    cli
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Suggests: 
+    gitlabr,
+    readr,
+    whisker,
+    lubridate

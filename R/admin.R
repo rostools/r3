@@ -13,6 +13,12 @@
 #' admin_create_planning_issue("r-cubed-intermediate", "2022-06-21")
 #' }
 admin_create_planning_issue <- function(repo, course_date) {
+    if (!any(requireNamespace("gitlabr", quietly = TRUE) |
+             requireNamespace("lubridate", quietly = TRUE) |
+             requireNamespace("whisker", quietly = TRUE))) {
+        stop("Please install gitlabr, lubridate, and whisker.")
+    }
+
     stamp_format <- lubridate::stamp_date("Mar. 1, 2021", quiet = TRUE)
     template_path <- usethis:::find_template("planning-issue.md", package = "r3")
     issue_description <- whisker::whisker.render(
