@@ -2,26 +2,16 @@
 % Please edit documentation in R/open-links.R
 \name{open_url}
 \alias{open_url}
-\alias{open_course_material}
-\alias{open_schedule}
+\alias{open_intro_course_site}
 \alias{open_github_join}
 \alias{open_pre_survey}
 \alias{open_feedback_survey_intro}
 \alias{open_feedback_survey_intermediate}
-\alias{open_slides}
-\alias{open_rproject_management}
-\alias{open_version_control}
-\alias{open_data_wrangling}
-\alias{open_data_visualization}
-\alias{open_reproducible_documents}
-\alias{open_code_of_conduct}
-\alias{open_syllabus}
-\alias{open_assignment}
+\alias{open_intro_slides}
+\alias{open_intro_assignment}
 \title{Opens a browser to course resources.}
 \usage{
-open_course_material()
-
-open_schedule()
+open_intro_course_site()
 
 open_github_join()
 
@@ -31,32 +21,16 @@ open_feedback_survey_intro()
 
 open_feedback_survey_intermediate()
 
-open_slides()
+open_intro_slides()
 
-open_rproject_management()
-
-open_version_control()
-
-open_data_wrangling()
-
-open_data_visualization()
-
-open_reproducible_documents()
-
-open_code_of_conduct()
-
-open_syllabus()
-
-open_assignment()
+open_intro_assignment()
 }
 \description{
 Opens a browser to course resources.
 }
 \section{Functions}{
 \itemize{
-\item \code{open_course_material}: Opens website for course material.
-
-\item \code{open_schedule}: Opens schedule for the Intro to R3 course.
+\item \code{open_intro_course_site}: Opens website for course material.
 
 \item \code{open_github_join}: Opens GitHub account creation website.
 
@@ -66,22 +40,8 @@ Opens a browser to course resources.
 
 \item \code{open_feedback_survey_intermediate}: Opens daily feedback survey for intermediate course.
 
-\item \code{open_slides}: Function to take you to the slides section.
+\item \code{open_intro_slides}: Function to take you to the slides section.
 
-\item \code{open_rproject_management}: Function to take you right to Project Management session.
-
-\item \code{open_version_control}: Function to take you right to Version Control session.
-
-\item \code{open_data_wrangling}: Function to take you right to Data Management and Wrangling session.
-
-\item \code{open_data_visualization}: Function to take you right to Data Visualization session.
-
-\item \code{open_reproducible_documents}: Function to take you right to Reproducible Documents session.
-
-\item \code{open_code_of_conduct}: Opens the Code of Conduct webpage.
-
-\item \code{open_syllabus}: Function to take you right to the Syllabus webpage.
-
-\item \code{open_assignment}: Function to take you to the group project.
+\item \code{open_intro_assignment}: Function to take you to the group project.
 }}
 
