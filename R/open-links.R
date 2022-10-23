@@ -11,15 +11,8 @@ NULL
 
 #' @describeIn open_url Opens website for course material.
 #' @export
-open_course_material <- function() {
+open_intro_course_site <- function() {
     open_link(material_link)
-}
-
-#' @describeIn open_url Opens schedule for the Intro to R3 course.
-#' @export
-open_schedule <- function() {
-    link <- paste0(material_link, "syllabus.html#general-schedule")
-    open_link(link)
 }
 
 #' @describeIn open_url Opens GitHub account creation website.
@@ -55,55 +48,13 @@ open_chapter <- function(chapter) {
 
 #' @describeIn open_url Function to take you to the slides section.
 #' @export
-open_slides <- function() {
+open_intro_slides <- function() {
     open_chapter("lecture-slides")
-}
-
-#' @describeIn open_url Function to take you right to Project Management session.
-#' @export
-open_rproject_management <- function() {
-    open_chapter("r-project-management")
-}
-
-#' @describeIn open_url Function to take you right to Version Control session.
-#' @export
-open_version_control <- function() {
-    open_chapter("version-control")
-}
-
-#' @describeIn open_url Function to take you right to Data Management and Wrangling session.
-#' @export
-open_data_wrangling <- function() {
-    open_chapter("wrangling")
-}
-
-#' @describeIn open_url Function to take you right to Data Visualization session.
-#' @export
-open_data_visualization <- function() {
-    open_chapter("visualization")
-}
-
-#' @describeIn open_url Function to take you right to Reproducible Documents session.
-#' @export
-open_reproducible_documents <- function() {
-    open_chapter("reproducible-documents")
-}
-
-#' @describeIn open_url Opens the Code of Conduct webpage.
-#' @export
-open_code_of_conduct <- function() {
-    open_chapter("conduct")
-}
-
-#' @describeIn open_url Function to take you right to the Syllabus webpage.
-#' @export
-open_syllabus <- function() {
-    open_chapter("index")
 }
 
 #' @describeIn open_url Function to take you to the group project.
 #' @export
-open_assignment <- function() {
+open_intro_assignment <- function() {
     open_chapter("assignment")
 }
 

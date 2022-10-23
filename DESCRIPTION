@@ -1,6 +1,6 @@
 Package: r3
 Title: Companion Package for the R3 Courses
-Version: 0.2.1
+Version: 0.2.1.9000
 Authors@R: 
     person(given = "Luke",
            family = "Johnston",
@@ -29,10 +29,14 @@ Imports:
     hexbin,
     fs,
     vroom,
-    furrr,
     snakecase,
     cli
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
+Suggests: 
+    gitlabr,
+    readr,
+    whisker,
+    lubridate
