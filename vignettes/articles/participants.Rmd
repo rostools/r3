@@ -73,3 +73,32 @@ intermediate_course %>%
     list_counts()
 ```
 
+## Participants moving from intro to intermediate
+
+```{r}
+source(here::here("vignettes/articles/ignore.R"))
+library(googledrive)
+library(googlesheets4)
+library(tidyverse)
+library(lubridate)
+conflicted::conflict_prefer("filter", "dplyr")
+presurvey_intro <- 
+    drive_get(id = INTRO_PRE_SURVEY_ID) %>%
+    read_sheet() %>% 
+    select(full_name_intro = `What is your full name?`)
+
+presurvey_intermediate <- 
+    drive_get(id = INTERMEDIATE_PRE_SURVEY_ID) %>%
+    read_sheet() %>% 
+    select(full_name_intermediate = `What is your full name?`)
+
+intersect(
+    presurvey_intro %>%
+        pull(full_name_intro),
+    presurvey_intermediate %>% 
+        pull(full_name_intermediate)
+) %>% 
+    length()
+
+```
+
