@@ -7,6 +7,7 @@
 \alias{check_git_config}
 \alias{check_setup}
 \alias{check_project_setup}
+\alias{check_project_setup_advanced}
 \title{Runs checks on your system for R, RStudio, and Git.}
 \usage{
 check_r_version()
@@ -18,6 +19,8 @@ check_git_config()
 check_setup()
 
 check_project_setup()
+
+check_project_setup_advanced()
 }
 \value{
 Prints information on given check.
@@ -27,14 +30,17 @@ Runs checks on your system for R, RStudio, and Git.
 }
 \section{Functions}{
 \itemize{
-\item \code{check_r_version}: Check version of R that is installed.
+\item \code{check_r_version()}: Check version of R that is installed.
 
-\item \code{check_rstudio_version}: Check version of RStudio that is installed.
+\item \code{check_rstudio_version()}: Check version of RStudio that is installed.
 
-\item \code{check_git_config}: Checks your computer's Git config settings.
+\item \code{check_git_config()}: Checks your computer's Git config settings.
 
-\item \code{check_setup}: Check your setup in preparation for the r-cubed course.
+\item \code{check_setup()}: Check your setup in preparation for the r-cubed course.
 
-\item \code{check_project_setup}: Check your project setup for the files and folders created.
+\item \code{check_project_setup()}: Check your project setup for the files and folders created.
+
+\item \code{check_project_setup_advanced()}: For the Advanced Course: Check your project setup
+for the files and folders created during the pre-course tasks.
+
 }}
-

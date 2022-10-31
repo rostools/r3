@@ -2,17 +2,13 @@
 % Please edit documentation in R/open-links.R
 \name{open_url}
 \alias{open_url}
-\alias{open_intro_course_site}
 \alias{open_github_join}
 \alias{open_pre_survey}
 \alias{open_feedback_survey_intro}
 \alias{open_feedback_survey_intermediate}
-\alias{open_intro_slides}
-\alias{open_intro_assignment}
+\alias{open_feedback_survey_advanced}
 \title{Opens a browser to course resources.}
 \usage{
-open_intro_course_site()
-
 open_github_join()
 
 open_pre_survey()
@@ -21,27 +17,21 @@ open_feedback_survey_intro()
 
 open_feedback_survey_intermediate()
 
-open_intro_slides()
-
-open_intro_assignment()
+open_feedback_survey_advanced()
 }
 \description{
 Opens a browser to course resources.
 }
 \section{Functions}{
 \itemize{
-\item \code{open_intro_course_site}: Opens website for course material.
+\item \code{open_github_join()}: Opens GitHub account creation website.
 
-\item \code{open_github_join}: Opens GitHub account creation website.
+\item \code{open_pre_survey()}: Opens pre-course survey.
 
-\item \code{open_pre_survey}: Opens pre-course survey.
+\item \code{open_feedback_survey_intro()}: Opens daily feedback survey for intro course.
 
-\item \code{open_feedback_survey_intro}: Opens daily feedback survey for intro course.
+\item \code{open_feedback_survey_intermediate()}: Opens daily feedback survey for intermediate course.
 
-\item \code{open_feedback_survey_intermediate}: Opens daily feedback survey for intermediate course.
+\item \code{open_feedback_survey_advanced()}: Opens daily feedback survey for advanced course.
 
-\item \code{open_intro_slides}: Function to take you to the slides section.
-
-\item \code{open_intro_assignment}: Function to take you to the group project.
 }}
-

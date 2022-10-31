@@ -1,5 +1,3 @@
-material_link <- "https://r-cubed.rostools.org/"
-
 open_link <- function(link) {
     utils::browseURL(link)
 }
@@ -8,12 +6,6 @@ open_link <- function(link) {
 #'
 #' @name open_url
 NULL
-
-#' @describeIn open_url Opens website for course material.
-#' @export
-open_intro_course_site <- function() {
-    open_link(material_link)
-}
 
 #' @describeIn open_url Opens GitHub account creation website.
 #' @export
@@ -39,26 +31,15 @@ open_feedback_survey_intermediate <- function() {
     open_link("https://docs.google.com/forms/d/e/1FAIpQLSd_C-enA4y8PNOehvpqbxBtknsRVzvIOCt_0fAGpDysJWb0FQ/viewform?usp=sf_link")
 }
 
+#' @describeIn open_url Opens daily feedback survey for advanced course.
+#' @export
+open_feedback_survey_advanced <- function() {
+    open_link("https://docs.google.com/forms/d/e/1FAIpQLScwyqQJpuzoalyFQpiI3XjqWg6Aw8ox5ZFDJegYpmwNH0ekSQ/viewform?usp=sf_link")
+}
+
 # Chapters ----------------------------------------------------------------
 
 open_chapter <- function(chapter) {
     link <- paste0(material_link, chapter)
     open_link(link)
-}
-
-#' @describeIn open_url Function to take you to the slides section.
-#' @export
-open_intro_slides <- function() {
-    open_chapter("lecture-slides")
-}
-
-#' @describeIn open_url Function to take you to the group project.
-#' @export
-open_intro_assignment <- function() {
-    open_chapter("assignment")
-}
-
-# Do I need this?
-open_precourse_tasks <- function() {
-    open_chapter("pre-course")
 }
