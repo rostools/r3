@@ -1,4 +1,4 @@
-# r3 (development version)
+# r3 0.2.2
 
 * Trimmed down dependencies by having a function install the packages for the course
 * Added planning issue to send to GitLab or GitHub
