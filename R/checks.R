@@ -110,3 +110,22 @@ check_project_setup <- function() {
     file_tree <- fs::dir_tree(proj, recurse = 2)
     return(invisible(file_tree))
 }
+
+#' @describeIn check_system For the Advanced Course: Check your project setup
+#'   for the files and folders created during the pre-course tasks.
+#' @export
+check_project_setup_advanced <- function() {
+    proj <- rstudioapi::getActiveProject()
+    if (is.null(proj)) {
+        cli::cli_abort("You aren't in the R project. Please open the R Project for the course and run this function again in the Console.")
+    }
+    if (!(fs::file_exists(fs::path(proj, "data-raw", "nmr-omics.R")) &
+          fs::dir_exists(fs::path(proj, "data-raw", "nmr-omics")) &
+          fs::file_exists(fs::path(proj, "data", "lipidomics.rda")))) {
+        cli::cli_abort("The folder {.path data-raw/nmr-omics/} and files {.path data-raw/nmr-omics.R} and {.path data/lipidomics.rda} don't exist. Please follow the instructions to download and process the dataset.")
+    }
+    hd_line("Show folders and files of project:")
+    usethis::ui_todo("Please copy and paste this output into the survey question:")
+    file_tree <- fs::dir_tree(proj, recurse = 2)
+    return(invisible(file_tree))
+}
