@@ -1,6 +1,9 @@
 # r3 (development version)
 
-* Removed many of the `open_*` functions, don't really need them
+* Trimmed down dependencies by having a function install the packages for the course
+* Added planning issue to send to GitLab or GitHub
+* Added functions relevant to the advanced course (checks, etc)
+* Removed most of the `open_*` functions, don't really need them
 
 # r3 0.2.1
 
