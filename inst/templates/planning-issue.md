@@ -9,7 +9,7 @@
 
 Instructors/helpers:
 
-Before the course, please review the [CONTRIBUTING](https://gitlab.com/rostools/{{repo_name}}/-/blob/main/CONTRIBUTING.md) guide, the [Code of Conduct](https://gitlab.com/rostools/{{repo_name}}/-/blob/main/CODE_OF_CONDUCT.md), and the [tips for instructors](https://{{repo_name}}.rostools.org/for-instructors.html) section of the website.
+Before the course, please review the CONTRIBUTING guide, Code of Conduct, and the Tips for instructors or helpers in the [Guides](https://guides.rostools.org/) website.
 
 | Session | Topic | Instructor |
 |---|---|---|
@@ -28,6 +28,7 @@ Before the course, please review the [CONTRIBUTING](https://gitlab.com/rostools/
 - [ ] DATE: Get participants into groups (on GitHub too?) (~3-4 people per group)
 - [ ] DATE: Assign instructors to groups
 - [ ] DATE: Add everyone to Slack channel
+- [ ] DATE: Open up the Google Forms feedback survey
 
 ## To do during course
 
@@ -35,9 +36,10 @@ Before the course, please review the [CONTRIBUTING](https://gitlab.com/rostools/
 
 ## To do after course
 
+- [ ] Close the Google Forms feedback survey
+- [ ] Update instructor file with instructors who taught the course
 - [ ] Update git tag (use [CalVer](https://calver.org/) `YYYY-0M` style) and release it
 - [ ] Update Zenodo DOI
-- [ ] Update instructor file with instructors who taught the course
 
 ## Other details
 
