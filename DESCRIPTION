@@ -13,30 +13,24 @@ License: MIT + file LICENSE
 Depends: R (>= 3.6.0)
 Imports: 
     crayon,
-    git2r,
+    gert,
     here,
     knitr,
-    NHANES,
-    prodigenr,
     rmarkdown,
     rstudioapi,
     rversions,
-    stringr,
-    tidyverse,
     dplyr,
     usethis,
     utils,
-    hexbin,
     fs,
-    vroom,
-    snakecase,
-    cli
+    cli,
+    pak
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Suggests: 
     gitlabr,
-    readr,
     whisker,
-    lubridate
+    lubridate,
+    stringr
