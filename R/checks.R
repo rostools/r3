@@ -68,10 +68,9 @@ check_git_config <- function() {
     return(invisible(NULL))
 }
 
-# Taken from usethis:::git_config_get
 get_git_config <- function(name) {
-    config <- git2r::config()
-    config$global[[name]]
+    config <- gert::git_config_global()
+    config$value[which(config$name == name)]
 }
 
 #' @describeIn check_system Check your setup in preparation for the r-cubed course.
