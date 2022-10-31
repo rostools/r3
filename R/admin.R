@@ -12,7 +12,7 @@
 #' \dontrun{
 #' admin_create_planning_issue("r-cubed-intermediate", "2022-06-21")
 #' }
-admin_create_planning_issue <- function(repo, course_date) {
+admin_create_planning_issue <- function(repo, course_date, host = c("gitlab", "github")) {
     if (!any(requireNamespace("gitlabr", quietly = TRUE) |
              requireNamespace("lubridate", quietly = TRUE) |
              requireNamespace("whisker", quietly = TRUE))) {
@@ -31,21 +31,31 @@ admin_create_planning_issue <- function(repo, course_date) {
         )
     )
 
-    gitlabr::set_gitlab_connection(
-        gitlab_url = "https://gitlab.com/",
-        private_token = askpass::askpass("Provide your GitLab PAT.")
-    )
+    host <- rlang::arg_match(host)
 
-    project_id <- switch(repo,
-                         "r-cubed-intermediate" = "20120886",
-                         "r-cubed" = "15345313")
+    if (host == "gitlab") {
+        gitlabr::set_gitlab_connection(
+            gitlab_url = "https://gitlab.com/",
+            private_token = askpass::askpass("Provide your GitLab PAT.")
+        )
 
-    gitlabr::gl_new_issue(
-        project = project_id,
-        title = paste0("Course planning and details - ", course_date),
-        description = paste0(issue_description, collapse = "\n"),
-        labels = "Admin"
-    )
+        project_id <- switch(repo,
+                             "r-cubed-intermediate" = "20120886",
+                             "r-cubed" = "15345313")
+
+        gitlabr::gl_new_issue(
+            project = project_id,
+            title = paste0("Course planning and details - ", course_date),
+            description = paste0(issue_description, collapse = "\n"),
+            labels = "Admin"
+        )
+    } else if (host == "github") {
+        githubr::gh_new_issue(
+            repo = paste0("rostools/", repo),
+            title = paste0("Course planning and details - ", course_date),
+            body = paste0(issue_description, collapse = "\n")
+        )
+    }
 
     return(invisible(NULL))
 }
