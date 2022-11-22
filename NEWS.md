@@ -1,3 +1,5 @@
+# r3 0.2.3
+
 # r3 0.2.2
 
 * Trimmed down dependencies by having a function install the packages for the course
