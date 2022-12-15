@@ -1,6 +1,6 @@
 #' Install the R packages necessary for the Advanced R course.
 #'
-#' @rdname install_packages
+#' @name install_packages
 #' @return Outputs nothing, used to install packages for the R course.
 #'
 NULL
