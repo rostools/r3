@@ -36,10 +36,3 @@ open_feedback_survey_intermediate <- function() {
 open_feedback_survey_advanced <- function() {
     open_link("https://docs.google.com/forms/d/e/1FAIpQLScwyqQJpuzoalyFQpiI3XjqWg6Aw8ox5ZFDJegYpmwNH0ekSQ/viewform?usp=sf_link")
 }
-
-# Chapters ----------------------------------------------------------------
-
-open_chapter <- function(chapter) {
-    link <- paste0(material_link, chapter)
-    open_link(link)
-}
