@@ -1,6 +1,7 @@
 # r3 0.2.3
 
 * Remove installation of some packages for advanced course (like rspm).
+* Add function to install packages for introduction course. 
 
 # r3 0.2.2
 
