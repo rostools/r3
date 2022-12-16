@@ -27,11 +27,11 @@ course and the [r-cubed-intermediate] R course.
 
 ## Installation
 
-You can install the released version of r3 from GitLab with:
+You can install the released version of r3 from GitHub with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_gitlab("rostools/r3", upgrade = TRUE)
+remotes::install_github("rostools/r3", upgrade = TRUE)
 ```
 
 ## Using or modifying for courses based on r-cubed

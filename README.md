@@ -17,10 +17,12 @@ R course.
 
 ## Installation
 
-You can install the released version of r3 from GitLab with:
+You can install the released version of r3 from GitHub with:
 
-    # install.packages("remotes")
-    remotes::install_gitlab("rostools/r3", upgrade = TRUE)
+``` r
+# install.packages("remotes")
+remotes::install_github("rostools/r3", upgrade = TRUE)
+```
 
 ## Using or modifying for courses based on r-cubed
 
@@ -29,13 +31,13 @@ this helper package for the course, you’ll likely want to modify it.
 While many functions don’t need to be modified for your own course,
 there are several that will need to be:
 
--   `open_pre_survey()`, `open_feedback_survey()` in the
-    `R/open-links.R` file: The Google Form (or other survey platform)
-    URLs should be replaced to the one you will use for the course.
--   Opening any of the website links with the `open_` functions in
-    `R/open-links.R`: The variable `material_link` at the top of this R
-    file should be replaced to which ever other URL location you will
-    have the course material.
+- `open_pre_survey()`, `open_feedback_survey()` in the `R/open-links.R`
+  file: The Google Form (or other survey platform) URLs should be
+  replaced to the one you will use for the course.
+- Opening any of the website links with the `open_` functions in
+  `R/open-links.R`: The variable `material_link` at the top of this R
+  file should be replaced to which ever other URL location you will have
+  the course material.
 
 Check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for other details
 about contributing or working with this package.
