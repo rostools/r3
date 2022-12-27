@@ -19,7 +19,7 @@ install_packages_advanced <- function() {
 install_packages_introduction <- function() {
   install_packages_generic(
     url = "https://gitlab.com/rostools/r-cubed/-/raw/main/DESCRIPTION",
-    ignore_packages = "xaringan|xaringanthemer|showtext|downlit"
+    ignore_packages = "xaringan|xaringanthemer|showtext|downlit|r3"
   )
 }
 
