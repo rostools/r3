@@ -1,5 +1,6 @@
 # r3 0.2.3
 
+* Fixed a bug with `check_git_config()` where it wasn't doing the checks properly.
 * Remove installation of some packages for advanced course (like rspm).
 * Add function to install packages for introduction course. 
 
