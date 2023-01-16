@@ -44,7 +44,7 @@ check_git_config <- function() {
         name = get_git_config("user.name"),
         email = get_git_config("user.email")
     )
-    git_config_values <- Filter(Negate(is.null), git_config_values)
+    git_config_values <- Filter(function(f) length(f) > 0, git_config_values)
 
     if (length(git_config_values) == 0) {
         ui_oops("Your name and email aren't configured in Git.")
