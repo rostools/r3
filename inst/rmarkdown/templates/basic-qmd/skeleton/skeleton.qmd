@@ -1,0 +1,19 @@
+---
+title: "Draft Quarto document"
+author: "Your Name"
+format: html
+execute:
+  echo: true
+---
+
+## Header 1
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Code chunk
+```
+

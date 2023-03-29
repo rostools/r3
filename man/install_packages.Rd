@@ -2,10 +2,13 @@
 % Please edit documentation in R/install-packages.R
 \name{install_packages}
 \alias{install_packages}
+\alias{install_packages_intermediate}
 \alias{install_packages_advanced}
 \alias{install_packages_introduction}
-\title{Install the R packages necessary for the Advanced R course.}
+\title{Install the R packages necessary for the specific R course.}
 \usage{
+install_packages_intermediate()
+
 install_packages_advanced()
 
 install_packages_introduction()
@@ -14,10 +17,12 @@ install_packages_introduction()
 Outputs nothing, used to install packages for the R course.
 }
 \description{
-Install the R packages necessary for the Advanced R course.
+Install the R packages necessary for the specific R course.
 }
 \section{Functions}{
 \itemize{
+\item \code{install_packages_intermediate()}: Install necessary packages for the intermediate course.
+
 \item \code{install_packages_advanced()}: Install necessary packages for the advanced course.
 
 \item \code{install_packages_introduction()}: Install necessary packages for the introduction course.
