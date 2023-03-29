@@ -2,6 +2,7 @@
 
 -   Added function to install packages for intermediate course.
 -   Added function to create a Qmd template file.
+-   Don't need `open_pre_survey()` anymore.
 
 # r3 0.2.3
 

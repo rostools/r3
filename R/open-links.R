@@ -13,12 +13,6 @@ open_github_join <- function() {
     open_link("https://github.com/join")
 }
 
-#' @describeIn open_url Opens pre-course survey.
-#' @export
-open_pre_survey <- function() {
-    open_link("https://docs.google.com/forms/d/e/1FAIpQLSeuMe485zZXlG9uQlUgcgsWBJvpHUB_-bMVkEtA4moWK_oUoQ/viewform?usp=sf_link")
-}
-
 #' @describeIn open_url Opens daily feedback survey for intro course.
 #' @export
 open_feedback_survey_intro <- function() {

@@ -3,15 +3,12 @@
 \name{open_url}
 \alias{open_url}
 \alias{open_github_join}
-\alias{open_pre_survey}
 \alias{open_feedback_survey_intro}
 \alias{open_feedback_survey_intermediate}
 \alias{open_feedback_survey_advanced}
 \title{Opens a browser to course resources.}
 \usage{
 open_github_join()
-
-open_pre_survey()
 
 open_feedback_survey_intro()
 
@@ -25,8 +22,6 @@ Opens a browser to course resources.
 \section{Functions}{
 \itemize{
 \item \code{open_github_join()}: Opens GitHub account creation website.
-
-\item \code{open_pre_survey()}: Opens pre-course survey.
 
 \item \code{open_feedback_survey_intro()}: Opens daily feedback survey for intro course.
 
