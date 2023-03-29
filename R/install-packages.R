@@ -1,16 +1,25 @@
-#' Install the R packages necessary for the Advanced R course.
+#' Install the R packages necessary for the specific R course.
 #'
 #' @name install_packages
 #' @return Outputs nothing, used to install packages for the R course.
 #'
 NULL
 
+#' @describeIn install_packages Install necessary packages for the intermediate course.
+#' @export
+install_packages_intermediate <- function() {
+  install_packages_generic(
+    url = url_gh_raw_file("rostools/r-cubed-intermediate", "DESCRIPTION"),
+    ignore_packages = "r3admin|r3"
+  )
+}
+
 #' @describeIn install_packages Install necessary packages for the advanced course.
 #' @export
 install_packages_advanced <- function() {
   install_packages_generic(
-    url = "https://raw.githubusercontent.com/rostools/r-cubed-advanced/main/DESCRIPTION",
-    ignore_packages = "r3admin|RcppTOML|rspm|todor"
+    url = url_gh_raw_file("rostools/r-cubed-advanced", "DESCRIPTION"),
+    ignore_packages = "r3admin|RcppTOML|rspm|todor|r3"
   )
 }
 
@@ -18,8 +27,8 @@ install_packages_advanced <- function() {
 #' @export
 install_packages_introduction <- function() {
   install_packages_generic(
-    url = "https://gitlab.com/rostools/r-cubed/-/raw/main/DESCRIPTION",
-    ignore_packages = "xaringan|xaringanthemer|showtext|downlit"
+    url = url_gh_raw_file("rostools/r-cubed-intro", "DESCRIPTION"),
+    ignore_packages = "downlit|r3|r3admin"
   )
 }
 
@@ -31,4 +40,13 @@ install_packages_generic <- function(url, ignore_packages = NULL) {
     needed_packages <- stringr::str_subset(needed_packages, ignore_packages, negate = TRUE)
   pak::pkg_install(needed_packages, ask = FALSE, upgrade = TRUE)
   return(invisible(NULL))
+}
+
+url_gh_raw_file <- function(repo, file) {
+  paste0(
+    "https://raw.githubusercontent.com/",
+    repo,
+    "/main/",
+    file
+  )
 }
