@@ -8,6 +8,14 @@
 \description{
 Contains the helper functions and other files to make it easier for learners during (and after) the course.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/rostools/r3}
+  \item Report bugs at \url{https://github.com/rostools/r3/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Luke Johnston \email{lwjohnst@gmail.com} (\href{https://orcid.org/0000-0003-4169-2616}{ORCID})
 
