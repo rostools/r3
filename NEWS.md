@@ -1,5 +1,8 @@
 # r3 0.2.4
 
+-   Added function to install packages for intermediate course.
+-   Added function to create a Qmd template file.
+
 # r3 0.2.3
 
 -   Fixed a bug with `check_git_config()` where it wasn't doing the
