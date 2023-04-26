@@ -17,7 +17,7 @@ Imports:
     fs,
     gert,
     pak,
-    rmarkdown,
+    rlang,
     rstudioapi,
     rversions,
     stringr,
