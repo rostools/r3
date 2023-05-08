@@ -4,6 +4,8 @@
 -   Added function to create a Qmd template file.
 -   Don't need `open_pre_survey()` anymore.
 -   Move package over to GitHub.
+-   Fix bug in `check_r_version()` where if condition was comparing a
+    number with a character (PR #5).
 
 # r3 0.2.3
 
@@ -39,3 +41,4 @@
     due to multiple efforts at moving away from the term "master" (by
     Git itself and with GitHub).
 -   Start using cli package instead of usethis' `ui_*` functions.
+
