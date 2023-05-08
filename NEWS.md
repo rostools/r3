@@ -6,6 +6,8 @@
 -   Move package over to GitHub.
 -   Fix bug in `check_r_version()` where if condition was comparing a
     number with a character (PR #5).
+-   Fixed possible bug with `install_packages_generic()` where there was
+    an error of installing pak while using `pak::pak()`.
 
 # r3 0.2.3
 

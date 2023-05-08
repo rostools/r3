@@ -33,6 +33,7 @@ install_packages_introduction <- function() {
 }
 
 install_packages_generic <- function(url, ignore_packages = NULL) {
+  rlang::check_installed("pak")
   description_text <- readLines(url)
   # -1 to remove the R dependency from the vector.
   needed_packages <- desc::desc(text = description_text)$get_deps()$package[-1]
