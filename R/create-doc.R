@@ -34,7 +34,7 @@ create_generic_doc <- function(template_name = c("basic-rmd", "basic-qmd")) {
     fs::dir_create(fs::path(proj, "doc"))
   }
   fs::file_copy(
-    path_package_template("basic-rmd"),
+    path_package_template(template_name),
     new_file_name
   )
   cli::cli_alert_success("Created {.val {fs::path_file(new_file_name)}} file in the {.val doc/} folder.")
