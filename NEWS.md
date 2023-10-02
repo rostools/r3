@@ -1,3 +1,8 @@
+# r3 0.2.5
+
+-   Fix code after update to use `.csv` instead of `.rda` in
+    `check_project_setup_advanced()` for Advanced course.
+
 # r3 0.2.4
 
 -   Added function to install packages for intermediate course.
@@ -43,4 +48,3 @@
     due to multiple efforts at moving away from the term "master" (by
     Git itself and with GitHub).
 -   Start using cli package instead of usethis' `ui_*` functions.
-
