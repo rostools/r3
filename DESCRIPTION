@@ -16,15 +16,15 @@ Imports:
     dplyr,
     fs,
     gert,
-    pak,
-    rmarkdown,
+    rlang,
     rstudioapi,
     rversions,
     stringr,
     usethis,
     utils
 Suggests: 
-    knitr
+    knitr,
+    pak
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

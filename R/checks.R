@@ -12,12 +12,12 @@ NULL
 #' @export
 check_r_version <- function() {
     latest_version <- dplyr::filter(rversions::r_versions(), version > "4.0.0")$version
-    current_version <- getRversion()
+    current_version <- as.character(getRversion())
     if (current_version %in% latest_version) {
+        ui_done("Your R is at the latest version of {current_version}!")
+    } else {
         ui_oops("Your version of R is {current_version}, but you need at least {latest_version[1]}.")
         ui_todo("You need to update your R version, please download the newest version at {ui_value(cran_link)}.")
-    } else {
-        ui_done("Your R is at the latest version of {current_version}!")
     }
     return(invisible(NULL))
 }
@@ -121,8 +121,8 @@ check_project_setup_advanced <- function() {
     }
     if (!(fs::file_exists(fs::path(proj, "data-raw", "nmr-omics.R")) &
           fs::dir_exists(fs::path(proj, "data-raw", "nmr-omics")) &
-          fs::file_exists(fs::path(proj, "data", "lipidomics.rda")))) {
-        cli::cli_abort("The folder {.path data-raw/nmr-omics/} and files {.path data-raw/nmr-omics.R} and {.path data/lipidomics.rda} don't exist. Please follow the instructions to download and process the dataset.")
+          fs::file_exists(fs::path(proj, "data", "lipidomics.csv")))) {
+        cli::cli_abort("The folder {.path data-raw/nmr-omics/} and files {.path data-raw/nmr-omics.R} and {.path data/lipidomics.csv} don't exist. Please follow the instructions to download and process the dataset.")
     }
     hd_line("Show folders and files of project:")
     usethis::ui_todo("Please copy and paste this output into the survey question:")

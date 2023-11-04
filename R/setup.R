@@ -5,6 +5,7 @@
 #' @export
 #'
 setup_git_config <- function() {
+  # TODO: Run check to make sure not to overwrite if it exists.
     user_name <- rstudioapi::showPrompt(
         "What is your name?",
         "Please type out your full name (e.g. first middle last)."

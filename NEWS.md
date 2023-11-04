@@ -2,6 +2,8 @@
 
 -   Switch all feedback survey links to go to the general one, with
     `open_feedback_surve()`.
+-   Fix code after update to use `.csv` instead of `.rda` in
+    `check_project_setup_advanced()` for Advanced course.
 
 # r3 0.2.4
 
@@ -9,6 +11,10 @@
 -   Added function to create a Qmd template file.
 -   Don't need `open_pre_survey()` anymore.
 -   Move package over to GitHub.
+-   Fix bug in `check_r_version()` where if condition was comparing a
+    number with a character (PR #5).
+-   Fixed possible bug with `install_packages_generic()` where there was
+    an error of installing pak while using `pak::pak()`.
 
 # r3 0.2.3
 
@@ -44,4 +50,3 @@
     due to multiple efforts at moving away from the term "master" (by
     Git itself and with GitHub).
 -   Start using cli package instead of usethis' `ui_*` functions.
-
