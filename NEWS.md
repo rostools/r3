@@ -1,5 +1,8 @@
 # r3 0.2.5
 
+-   Switch all feedback survey links to go to the general one, with
+    `open_feedback_surve()`.
+
 # r3 0.2.4
 
 -   Added function to install packages for intermediate course.
@@ -41,3 +44,4 @@
     due to multiple efforts at moving away from the term "master" (by
     Git itself and with GitHub).
 -   Start using cli package instead of usethis' `ui_*` functions.
+
