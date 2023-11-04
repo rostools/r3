@@ -1,3 +1,5 @@
+# r3 0.2.5
+
 # r3 0.2.4
 
 -   Added function to install packages for intermediate course.
