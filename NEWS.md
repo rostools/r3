@@ -1,3 +1,15 @@
+# r3 0.3.0
+
+-   Add helper `fix_git_remotes()` function to remove Git remotes, which
+    sometimes causes issues with participants projects if
+    `usethis::use_github()` has a problem.
+-   Update `setup_git_config()` to set pull strategy to not be rebase,
+    which is an issue with some Mac users.
+-   Add `setup_rproj()` function to set some project level settings that
+    make it easier for participants during the course.
+-   Add `setup_rstudio()` function to set some settings that help during
+    the course, like auto-saving.
+
 # r3 0.2.5
 
 -   Switch all feedback survey links to go to the general one, with
@@ -50,3 +62,4 @@
     due to multiple efforts at moving away from the term "master" (by
     Git itself and with GitHub).
 -   Start using cli package instead of usethis' `ui_*` functions.
+
