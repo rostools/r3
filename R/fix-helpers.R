@@ -13,5 +13,6 @@ fix_git_remotes <- function() {
     remotes,
     \(name) gert::git_remote_remove(name, repo = proj)
   )
+  cli::cli_inform("Removing the {.val {remotes}} remote{?s} from your Git repo.")
   invisible(NULL)
 }
