@@ -81,3 +81,19 @@ set_rproj_native_pipe <- function(text) {
   }
   text
 }
+
+#' Set some RStudio settings that help make things smoother during the course.
+#'
+#' @return Invisibly returns NULL, used for side effect of setting options in RStudio.
+#' @export
+#'
+setup_rstudio <- function() {
+  usethis::use_rstudio_preferences(
+    save_files_before_build = TRUE,
+    auto_append_newline = TRUE,
+    auto_save_on_blur = TRUE,
+    strip_trailing_whitespace = TRUE
+  )
+  cli::cli_inform("Set some RStudio settings to have a smoother experience during the course, like auto-saving files.")
+  invisible(NULL)
+}
