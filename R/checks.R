@@ -1,6 +1,6 @@
 
 cran_link <- "https://cran.r-project.org/"
-rstudio_dl_link <- "https://rstudio.com/products/rstudio/download/#download"
+rstudio_dl_link <- "https://posit.co/download/rstudio-desktop/#download"
 
 #' Runs checks on your system for R, RStudio, and Git.
 #'
