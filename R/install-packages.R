@@ -37,8 +37,9 @@ install_packages_generic <- function(url, ignore_packages = NULL) {
   description_text <- readLines(url)
   # -1 to remove the R dependency from the vector.
   needed_packages <- desc::desc(text = description_text)$get_deps()$package[-1]
-  if (!is.null(ignore_packages))
+  if (!is.null(ignore_packages)) {
     needed_packages <- stringr::str_subset(needed_packages, ignore_packages, negate = TRUE)
+  }
   pak::pkg_install(needed_packages, ask = FALSE, upgrade = TRUE)
   return(invisible(NULL))
 }

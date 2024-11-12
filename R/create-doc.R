@@ -43,8 +43,10 @@ create_generic_doc <- function(template_name = c("basic-rmd", "basic-qmd")) {
 
 path_package_template <- function(template_name) {
   fs::dir_ls(
-    fs::path_package("r3", "rmarkdown", "templates",
-                     template_name, "skeleton"),
+    fs::path_package(
+      "r3", "rmarkdown", "templates",
+      template_name, "skeleton"
+    ),
     regexp = "\\.[Rq]md$"
   )
 }
