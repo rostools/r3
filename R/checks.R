@@ -25,8 +25,9 @@ check_r_version <- function() {
 #' @describeIn check_system Check version of RStudio that is installed.
 #' @export
 check_rstudio_version <- function() {
-    if (!rstudioapi::isAvailable("1.3.1093")) {
-        cli::cli_alert_danger("Your version of RStudio is {rstudioapi::getVersion()}, but you need at least 1.3.1093.")
+    minimum_version <- "2023.06.0"
+    if (!rstudioapi::isAvailable(minimum_version)) {
+        cli::cli_alert_danger("Your version of RStudio is {.val {rstudioapi::getVersion()}}, but you need at least {.val minimum_version}.")
         cli::cli_ul("Please update your RStudio at {.val {rstudio_dl_link}}.")
     } else {
         ui_done("Your RStudio is at the latest version of {rstudioapi::getVersion()}!")
