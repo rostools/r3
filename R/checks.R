@@ -10,14 +10,12 @@ NULL
 #' @describeIn check_system Check version of R that is installed.
 #' @export
 check_r_version <- function() {
-  allowed_versions <- rversions::r_versions() |>
-    dplyr::filter(date > one_year_ago()) |>
-    dplyr::pull(version)
+  allowed_versions <- r3admin::get_allowed_r_versions()
   current_version <- as.character(getRversion())
   if (current_version %in% allowed_versions) {
     cli::cli_alert_success("Your R is at the latest version of {current_version}!")
   } else {
-    cli::cli_alert_danger("Your version of R is {.val {current_version}}, but you need at least {.val {latest_version[1]}}.")
+    cli::cli_alert_danger("Your version of R is {.val {current_version}}, but you need at least {.val {allowed_versions[1]}}.")
     cli::cli_ul("Please update your R version by downloading the newest version at {.href {cran_link}}.")
   }
   return(invisible(NULL))
@@ -26,8 +24,12 @@ check_r_version <- function() {
 #' @describeIn check_system Check version of RStudio that is installed.
 #' @export
 check_rstudio_version <- function() {
-  minimum_version <- "2023.12.1"
-  if (!rstudioapi::isAvailable(minimum_version)) {
+  allowed_versions <- r3admin::get_allowed_rstudio_versions() |>
+    stringr::str_replace_all("\\+", ".") |>
+    stringr::str_remove("v")
+  current_version <- as.character(rstudioapi::getVersion()) |>
+    stringr::str_replace("^(\\d{4})\\.([1-9])\\.", "\\1.0\\2.")
+  if (!current_version %in% allowed_versions) {
     cli::cli_alert_danger("Your version of RStudio is {.val {rstudioapi::getVersion()}}, but you need at least {.val minimum_version}.")
     cli::cli_ul("Please update your RStudio at {.href {rstudio_dl_link}}.")
   } else {
