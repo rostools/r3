@@ -10,13 +10,15 @@ NULL
 #' @describeIn check_system Check version of R that is installed.
 #' @export
 check_r_version <- function() {
-  latest_version <- dplyr::filter(rversions::r_versions(), version > "4.0.0")$version
+  allowed_versions <- rversions::r_versions() |>
+    dplyr::filter(date > one_year_ago()) |>
+    dplyr::pull(version)
   current_version <- as.character(getRversion())
-  if (current_version %in% latest_version) {
-    ui_done("Your R is at the latest version of {current_version}!")
+  if (current_version %in% allowed_versions) {
+    cli::cli_alert_success("Your R is at the latest version of {current_version}!")
   } else {
-    ui_oops("Your version of R is {current_version}, but you need at least {latest_version[1]}.")
-    ui_todo("You need to update your R version, please download the newest version at {ui_value(cran_link)}.")
+    cli::cli_alert_danger("Your version of R is {.val {current_version}}, but you need at least {.val {latest_version[1]}}.")
+    cli::cli_ul("Please update your R version by downloading the newest version at {.href {cran_link}}.")
   }
   return(invisible(NULL))
 }
@@ -24,12 +26,12 @@ check_r_version <- function() {
 #' @describeIn check_system Check version of RStudio that is installed.
 #' @export
 check_rstudio_version <- function() {
-  minimum_version <- "2023.06.2"
+  minimum_version <- "2023.12.1"
   if (!rstudioapi::isAvailable(minimum_version)) {
     cli::cli_alert_danger("Your version of RStudio is {.val {rstudioapi::getVersion()}}, but you need at least {.val minimum_version}.")
-    cli::cli_ul("Please update your RStudio at {.val {rstudio_dl_link}}.")
+    cli::cli_ul("Please update your RStudio at {.href {rstudio_dl_link}}.")
   } else {
-    ui_done("Your RStudio is at the latest version of {rstudioapi::getVersion()}!")
+    cli::cli_alert_success("Your RStudio is at the latest version of {.val {rstudioapi::getVersion()}}!")
   }
   return(invisible(NULL))
 
@@ -128,4 +130,8 @@ check_project_setup_advanced <- function() {
   usethis::ui_todo("Please copy and paste this output into the survey question:")
   file_tree <- fs::dir_tree(proj, recurse = 2)
   return(invisible(file_tree))
+}
+
+one_year_ago <- function() {
+  lubridate::today() - lubridate::years(1)
 }
