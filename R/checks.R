@@ -100,14 +100,14 @@ hd_line <- function(name) {
 
 #' @describeIn check_system Check your project setup for the files and folders created.
 #' @export
-check_project_setup <- function() {
+check_project_setup_intermediate <- function() {
   proj <- rstudioapi::getActiveProject()
   if (is.null(proj)) {
     usethis::ui_stop("You aren't in the R project. Please open the R Project for the course and run this function again in the Console.")
   }
-  if (!(fs::file_exists(fs::path(proj, "data-raw", "mmash-data.zip")) &
-    fs::dir_exists(fs::path(proj, "data-raw", "mmash")))) {
-    usethis::ui_stop("The mmash folder and mmash-data don't exist. Please follow the instructions to download and unzip the dataset.")
+  if (!(fs::file_exists(fs::path(proj, "data-raw", "dime.zip")) &
+    fs::dir_exists(fs::path(proj, "data-raw", "dime")))) {
+    cli::cli_abort("The {.file data-raw/dime/} folder and {.file data-raw/dime.zip} don't exist. Please follow the instructions to download and unzip the dataset.")
   }
   hd_line("Show folders and files of project:")
   usethis::ui_todo("Please copy and paste this output into the survey question:")
