@@ -8,7 +8,7 @@
 create_qmd_doc <- function() {
   proj <- usethis::proj_path()
   if (is.null(proj)) {
-    cli::cli_abort("You aren't in the R Project. Please open the R Project for the course and run this function again.")
+    cli::cli_abort("You aren't in the R Project. Please open the R Project for the workshop and run this function again.")
   }
   new_file_name <- fs::path(proj, "docs", "learning.qmd")
   if (!fs::dir_exists(fs::path(proj, "docs"))) {

@@ -77,7 +77,7 @@ get_git_config <- function(name) {
   config$value[which(config$name == name)]
 }
 
-#' @describeIn check_system Check your setup in preparation for the r-cubed course.
+#' @describeIn check_system Check your setup in preparation for the workshop.
 #' @export
 check_setup <- function() {
   hd_line("Checking R version:")
@@ -103,7 +103,7 @@ hd_line <- function(name) {
 check_project_setup_intermediate <- function() {
   proj <- rstudioapi::getActiveProject()
   if (is.null(proj)) {
-    usethis::ui_stop("You aren't in the R project. Please open the R Project for the course and run this function again in the Console.")
+    usethis::ui_stop("You aren't in the R project. Please open the R Project for the workshop and run this function again in the Console.")
   }
   if (!(fs::file_exists(fs::path(proj, "data-raw", "dime.zip")) &
     fs::dir_exists(fs::path(proj, "data-raw", "dime")))) {
@@ -115,13 +115,13 @@ check_project_setup_intermediate <- function() {
   return(invisible(file_tree))
 }
 
-#' @describeIn check_system For the Advanced Course: Check your project setup
-#'   for the files and folders created during the pre-course tasks.
+#' @describeIn check_system For the advanced workshop: Check your project setup
+#'   for the files and folders created during the pre-workshop tasks.
 #' @export
 check_project_setup_advanced <- function() {
   proj <- rstudioapi::getActiveProject()
   if (is.null(proj)) {
-    cli::cli_abort("You aren't in the R project. Please open the R Project for the course and run this function again in the Console.")
+    cli::cli_abort("You aren't in the R project. Please open the R Project for the workshop and run this function again in the Console.")
   }
   if (!(fs::file_exists(fs::path(proj, "data-raw", "nmr-omics.R")) &
     fs::dir_exists(fs::path(proj, "data-raw", "nmr-omics")) &

@@ -12,7 +12,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 The goal of r3 is to provide helper functions for several `r-cubed` R
-courses.
+workshops.
 
 ## Installation
 
@@ -23,16 +23,16 @@ You can install the released version of r3 from GitHub with:
 pak::pkg_install("rostools/r3", upgrade = TRUE)
 ```
 
-## Using or modifying for courses based on r-cubed
+## Using or modifying for workshops based on r-cubed
 
-If you want to run your own version of the course and would like to use
-this helper package for the course, you’ll likely want to modify it.
-While many functions don’t need to be modified for your own course,
-there are several that will need to be, especially:
+If you want to run your own version of the workshop and would like to
+use this helper package for the workshop, you’ll likely want to modify
+it. While many functions don’t need to be modified for your own
+workshop, there are several that will need to be, especially:
 
 - Any of the `open_feedback_*` functions in the `R/open-links.R` file:
   The Google Form (or other survey platform) URLs should be replaced to
-  the one you will use for the course.
+  the one you will use for the workshop.
 
 Check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for other details
 about contributing or working with this package.

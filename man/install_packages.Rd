@@ -5,7 +5,7 @@
 \alias{install_packages_intermediate}
 \alias{install_packages_advanced}
 \alias{install_packages_introduction}
-\title{Install the R packages necessary for the specific R course.}
+\title{Install the R packages necessary for the specific R workshop.}
 \usage{
 install_packages_intermediate()
 
@@ -14,17 +14,17 @@ install_packages_advanced()
 install_packages_introduction()
 }
 \value{
-Outputs nothing, used to install packages for the R course.
+Outputs nothing, used to install packages for the R workshop.
 }
 \description{
-Install the R packages necessary for the specific R course.
+Install the R packages necessary for the specific R workshop.
 }
 \section{Functions}{
 \itemize{
-\item \code{install_packages_intermediate()}: Install necessary packages for the intermediate course.
+\item \code{install_packages_intermediate()}: Install necessary packages for the intermediate workshop.
 
-\item \code{install_packages_advanced()}: Install necessary packages for the advanced course.
+\item \code{install_packages_advanced()}: Install necessary packages for the advanced workshop.
 
-\item \code{install_packages_introduction()}: Install necessary packages for the introduction course.
+\item \code{install_packages_introduction()}: Install necessary packages for the introduction workshop.
 
 }}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/fix-helpers.R
 \name{fix_git_remotes}
 \alias{fix_git_remotes}
-\title{Fix some Git remote issues that occur during the course.}
+\title{Fix some Git remote issues that occur during the workshop.}
 \usage{
 fix_git_remotes()
 }
@@ -10,5 +10,5 @@ fix_git_remotes()
 Used for the side effect of connecting to Git. Returns NULL invisibly.
 }
 \description{
-Fix some Git remote issues that occur during the course.
+Fix some Git remote issues that occur during the workshop.
 }

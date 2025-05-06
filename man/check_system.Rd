@@ -36,11 +36,11 @@ Runs checks on your system for R, RStudio, and Git.
 
 \item \code{check_git_config()}: Checks your computer's Git config settings.
 
-\item \code{check_setup()}: Check your setup in preparation for the r-cubed course.
+\item \code{check_setup()}: Check your setup in preparation for the workshop.
 
 \item \code{check_project_setup_intermediate()}: Check your project setup for the files and folders created.
 
-\item \code{check_project_setup_advanced()}: For the Advanced Course: Check your project setup
-for the files and folders created during the pre-course tasks.
+\item \code{check_project_setup_advanced()}: For the advanced workshop: Check your project setup
+for the files and folders created during the pre-workshop tasks.
 
 }}

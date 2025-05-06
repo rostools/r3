@@ -1,11 +1,11 @@
-#' Install the R packages necessary for the specific R course.
+#' Install the R packages necessary for the specific R workshop.
 #'
 #' @name install_packages
-#' @return Outputs nothing, used to install packages for the R course.
+#' @return Outputs nothing, used to install packages for the R workshop.
 #'
 NULL
 
-#' @describeIn install_packages Install necessary packages for the intermediate course.
+#' @describeIn install_packages Install necessary packages for the intermediate workshop.
 #' @export
 install_packages_intermediate <- function() {
   install_packages_generic(
@@ -14,7 +14,7 @@ install_packages_intermediate <- function() {
   )
 }
 
-#' @describeIn install_packages Install necessary packages for the advanced course.
+#' @describeIn install_packages Install necessary packages for the advanced workshop.
 #' @export
 install_packages_advanced <- function() {
   install_packages_generic(
@@ -23,7 +23,7 @@ install_packages_advanced <- function() {
   )
 }
 
-#' @describeIn install_packages Install necessary packages for the introduction course.
+#' @describeIn install_packages Install necessary packages for the introduction workshop.
 #' @export
 install_packages_introduction <- function() {
   install_packages_generic(
