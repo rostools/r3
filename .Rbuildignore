@@ -7,5 +7,7 @@
 ^CONTRIBUTING\.md$
 ^\.github$
 ^justfile$
-^*.toml$
+^air.toml$
+^.typos.toml$
+^.cz.toml$
 ^.editorconfig$
