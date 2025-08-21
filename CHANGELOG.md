@@ -1,3 +1,10 @@
+## 0.4.1 (2025-08-21)
+
+### Refactor
+
+- :fire: don't need "learning resources" RData in this package
+- :recycle: use implicit returns, not explicitly use `return()`
+
 ## 0.4.0 (2025-08-21)
 
 ### Feat
