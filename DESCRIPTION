@@ -21,7 +21,6 @@ Imports:
     samwise (>= 0.0.1),
     rlang,
     rstudioapi,
-    rversions,
     stringr,
     usethis,
     utils
