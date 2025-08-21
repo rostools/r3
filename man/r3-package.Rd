@@ -4,7 +4,7 @@
 \name{r3-package}
 \alias{r3}
 \alias{r3-package}
-\title{r3: Companion Package for Rostools R workshops}
+\title{r3: Companion Package for Rostools R Workshops}
 \description{
 Contains the helper functions and other files to make it easier for learners during (and after) the workshop.
 }
