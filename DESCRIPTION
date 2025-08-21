@@ -8,7 +8,7 @@ Description: Contains the helper functions and other files to make it
     easier for learners during (and after) the workshop.
 License: MIT + file LICENSE
 Depends:
-    R (>= 3.6.0)
+    R (>= 4.1.0)
 Imports:
     cli,
     crayon,
