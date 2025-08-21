@@ -4,7 +4,7 @@
   just --list --unsorted
 
 # Run build recipes and install the package
-build: install-package-dependencies style check-spelling document install-package
+run-all: install-package-dependencies style check-spelling document install-package
 
 # Install package dependencies
 install-package-dependencies:
