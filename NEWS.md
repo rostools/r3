@@ -1,4 +1,44 @@
-# r3 0.3.0
+## 0.4.1 (2025-08-21)
+
+### Refactor
+
+- :fire: don't need "learning resources" RData in this package
+- :recycle: use implicit returns, not explicitly use `return()`
+
+## 0.4.0 (2025-08-21)
+
+Started using automated releases via
+[Commitizen](https://commitizen-tools.github.io/commitizen/),
+that also includes automatic `NEWS.md` generation. This
+requires following [Conventional
+Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+### Feat
+
+- add setup code to set the auto-save. Closes #15
+- function to set rproj settings
+- add helper function to remove remotes when issues come up. Closes #10
+- add function to fix rebase issue. Closes #9 and #13
+
+### Fix
+
+- :heavy_plus_sign: fix name of old dependency (now samwise)
+- use the correct link for rstudio
+
+### Refactor
+
+- :pushpin: use R 4.1.0, since we use the pipe
+- :fire: remove `open_feedback_survey()`, use HTML buttons instead
+- :fire: remove leftover functions
+- :recycle: remove the Rmd doc creation
+- :recycle: clarify that check_project is for intermediate
+- :recycle: make use of the new r3admin functions for getting versions
+- :recycle: update versions checked for R and RStudio
+- match minimum RStudio version listed on website
+- update the minimum version needed for rstudio
+- add informative message to fixer
+
+## 0.3.0
 
 -   Add helper `fix_git_remotes()` function to remove Git remotes, which
     sometimes causes issues with participants projects if
@@ -10,14 +50,14 @@
 -   Add `setup_rstudio()` function to set some settings that help during
     the course, like auto-saving.
 
-# r3 0.2.5
+## 0.2.5
 
 -   Switch all feedback survey links to go to the general one, with
     `open_feedback_surve()`.
 -   Fix code after update to use `.csv` instead of `.rda` in
     `check_project_setup_advanced()` for Advanced course.
 
-# r3 0.2.4
+## 0.2.4
 
 -   Added function to install packages for intermediate course.
 -   Added function to create a Qmd template file.
@@ -28,7 +68,7 @@
 -   Fixed possible bug with `install_packages_generic()` where there was
     an error of installing pak while using `pak::pak()`.
 
-# r3 0.2.3
+## 0.2.3
 
 -   Fixed a bug with `check_git_config()` where it wasn't doing the
     checks properly.
@@ -36,7 +76,7 @@
     rspm).
 -   Add function to install packages for introduction course.
 
-# r3 0.2.2
+## 0.2.2
 
 -   Trimmed down dependencies by having a function install the packages
     for the course
@@ -44,7 +84,7 @@
 -   Added functions relevant to the advanced course (checks, etc)
 -   Removed most of the `open_*` functions, don't really need them
 
-# r3 0.2.1
+## 0.2.1
 
 -   Fix link to dataset.
 -   Remove extra commas from the Git setup (it was confusing some
@@ -52,7 +92,7 @@
 -   Checking the project folder structure was going too deep, changed
     recurse to 2 levels only (#11).
 
-# r3 0.2.0
+## 0.2.0
 
 -   Added a `NEWS.md` file to track changes to the package.
 -   Set minimum R version as 4.0.0 and RStudio to \>1.3.
