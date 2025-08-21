@@ -27,5 +27,5 @@ create_qmd_doc <- function() {
   cli::cli_alert_success(
     "Created {.val {fs::path_file(new_file_name)}} file in the {.val docs/} folder."
   )
-  return(invisible(new_file_name))
+  invisible(new_file_name)
 }

@@ -45,7 +45,7 @@ install_packages_generic <- function(url, ignore_packages = NULL) {
     )
   }
   pak::pkg_install(needed_packages, ask = FALSE, upgrade = TRUE)
-  return(invisible(NULL))
+  invisible(NULL)
 }
 
 url_gh_raw_file <- function(repo, file) {

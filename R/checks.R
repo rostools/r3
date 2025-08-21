@@ -24,7 +24,7 @@ check_r_version <- function() {
       "Please update your R version by downloading the newest version at {.href {cran_link}}."
     )
   }
-  return(invisible(NULL))
+  invisible(NULL)
 }
 
 #' @describeIn check_system Check version of RStudio that is installed.
@@ -45,7 +45,7 @@ check_rstudio_version <- function() {
       "Your RStudio is at the latest version of {.val {rstudioapi::getVersion()}}!"
     )
   }
-  return(invisible(NULL))
+  invisible(NULL)
 
   # gh::gh("/repos/:owner/:repo/releases/", owner = "rstudio", repo = "rstudio")
   # Use gh package for this..?
@@ -79,7 +79,7 @@ check_git_config <- function() {
     )
   }
 
-  return(invisible(NULL))
+  invisible(NULL)
 }
 
 get_git_config <- function(name) {
@@ -96,7 +96,7 @@ check_setup <- function() {
   check_rstudio_version()
   hd_line("Checking Git config settings:")
   check_git_config()
-  return(invisible(NULL))
+  invisible(NULL)
 }
 
 # From usethis:::hd_line
@@ -130,7 +130,7 @@ check_project_setup_intermediate <- function() {
     "Please copy and paste this output into the survey question:"
   )
   file_tree <- fs::dir_tree(proj, recurse = 2)
-  return(invisible(file_tree))
+  invisible(file_tree)
 }
 
 #' @describeIn check_system For the advanced workshop: Check your project setup
@@ -157,7 +157,7 @@ check_project_setup_advanced <- function() {
     "Please copy and paste this output into the survey question:"
   )
   file_tree <- fs::dir_tree(proj, recurse = 2)
-  return(invisible(file_tree))
+  invisible(file_tree)
 }
 
 one_year_ago <- function() {
