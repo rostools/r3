@@ -10,7 +10,7 @@ NULL
 install_packages_intermediate <- function() {
   install_packages_generic(
     url = url_gh_raw_file("rostools/r-cubed-intermediate", "DESCRIPTION"),
-    ignore_packages = "r3admin|r3"
+    ignore_packages = "samwise|r3"
   )
 }
 
@@ -19,7 +19,7 @@ install_packages_intermediate <- function() {
 install_packages_advanced <- function() {
   install_packages_generic(
     url = url_gh_raw_file("rostools/r-cubed-advanced", "DESCRIPTION"),
-    ignore_packages = "r3admin|RcppTOML|rspm|todor|r3"
+    ignore_packages = "samwise|RcppTOML|rspm|todor|r3"
   )
 }
 
@@ -28,7 +28,7 @@ install_packages_advanced <- function() {
 install_packages_introduction <- function() {
   install_packages_generic(
     url = url_gh_raw_file("rostools/r-cubed-intro", "DESCRIPTION"),
-    ignore_packages = "downlit|r3|r3admin"
+    ignore_packages = "downlit|r3|samwise"
   )
 }
 
