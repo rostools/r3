@@ -6,13 +6,17 @@
 fix_git_remotes <- function() {
   proj <- rstudioapi::getActiveProject()
   if (is.null(proj)) {
-    usethis::ui_stop("You aren't in the R project. Please open the R Project for the workshop and run this function again in the Console.")
+    usethis::ui_stop(
+      "You aren't in the R project. Please open the R Project for the workshop and run this function again in the Console."
+    )
   }
   remotes <- gert::git_remote_list(proj)$name
   purrr::walk(
     remotes,
     \(name) gert::git_remote_remove(name, repo = proj)
   )
-  cli::cli_inform("Removing the {.val {remotes}} remote{?s} from your Git repo.")
+  cli::cli_inform(
+    "Removing the {.val {remotes}} remote{?s} from your Git repo."
+  )
   invisible(NULL)
 }
