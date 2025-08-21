@@ -4,7 +4,7 @@
   just --list --unsorted
 
 # Run build recipes and install the package
-run-all: install-package-dependencies style check-spelling document install-package
+run-all: install-package-dependencies style check-spelling document build-readme check install-package
 
 # Install package dependencies
 install-package-dependencies:
@@ -28,3 +28,13 @@ style:
 # Run spell checker
 check-spelling:
   uvx typos
+
+# Re-build the README file from the Rmd
+build-readme:
+  #!/usr/bin/Rscript
+  devtools::build_readme()
+
+# Run local CRAN checks
+check:
+  #!/usr/bin/env Rscript
+  devtools::check(error_on = "note")
