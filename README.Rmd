@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# r3: A Companion Package for `r-cubed` R Workshops
+# r3: A companion package for the rostools R workshops
 
 <!-- badges: start -->
 
@@ -23,7 +23,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 <!-- badges: end -->
 
-The goal of r3 is to provide helper functions for several `r-cubed` R
+The goal of r3 is to provide helper functions for several rostools R
 workshops.
 
 ## Installation
@@ -35,7 +35,7 @@ You can install the released version of r3 from GitHub with:
 pak::pak("rostools/r3", upgrade = TRUE)
 ```
 
-## Using or modifying for workshops based on r-cubed
+## Using or modifying for R workshops
 
 If you want to run your own version of the workshop and would like to
 use this helper package for the workshop, you'll likely want to modify
