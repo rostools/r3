@@ -1,3 +1,9 @@
+## 0.5.0 (2026-02-01)
+
+### Feat
+
+- :sparkles: moved get R and RStudio version functions from samwise
+
 ## 0.4.1 (2025-08-21)
 
 ### Refactor
