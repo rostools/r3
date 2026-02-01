@@ -10,7 +10,7 @@ NULL
 #' @describeIn check_system Check version of R that is installed.
 #' @export
 check_r_version <- function() {
-  allowed_versions <- samwise::get_allowed_r_versions()
+  allowed_versions <- get_allowed_r_versions()
   current_version <- as.character(getRversion())
   if (current_version %in% allowed_versions) {
     cli::cli_alert_success(
@@ -30,7 +30,7 @@ check_r_version <- function() {
 #' @describeIn check_system Check version of RStudio that is installed.
 #' @export
 check_rstudio_version <- function() {
-  allowed_versions <- samwise::get_allowed_rstudio_versions() |>
+  allowed_versions <- get_allowed_rstudio_versions() |>
     stringr::str_replace_all("\\+", ".") |>
     stringr::str_remove("v")
   current_version <- as.character(rstudioapi::getVersion()) |>
