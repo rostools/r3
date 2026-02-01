@@ -4,10 +4,10 @@
   just --list --unsorted
 
 # Run build recipes and install the package
-run-all: install-package-dependencies style check-spelling document build-readme check install-package
+run-all: install-deps style check-spelling document build-readme check install-package
 
 # Install package dependencies
-install-package-dependencies:
+install-deps:
   #!/usr/bin/Rscript
   pak::pak(ask = FALSE)
 
