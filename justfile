@@ -4,7 +4,7 @@
   just --list --unsorted
 
 # Run build recipes and install the package
-run-all: install-deps style check-spelling document build-readme check install-package
+run-all: install-deps style check-code check-spelling document build-readme check install-package
 
 # Install package dependencies
 install-deps:
@@ -24,6 +24,10 @@ document:
 # Run style formatter
 style:
   air format .
+
+# Check code (lint)
+check-code:
+  jarl check .
 
 # Run spell checker
 check-spelling:
