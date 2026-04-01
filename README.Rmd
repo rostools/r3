@@ -20,7 +20,8 @@ knitr::opts_chunk$set(
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![build](https://github.com/rostools/r3/actions/workflows/build.yaml/badge.svg)](https://github.com/rostools/r3/actions/workflows/build.yaml)
-
+[![R-universe version](https://rostools.r-universe.dev/r3/badges/version)](https://rostools.r-universe.dev/r3)
+[![r-universe status](https://rostools.r-universe.dev/r3/badges/checks)](https://rostools.r-universe.dev/r3)
 <!-- badges: end -->
 
 The goal of r3 is to provide helper functions for several rostools R
@@ -28,7 +29,14 @@ workshops.
 
 ## Installation
 
-You can install the released version of r3 from GitHub with:
+You can install the released version of r3 from
+[r-universe](https://rostools.r-universe.dev/r3) with:
+
+``` r
+install.packages("r3", repos = c('https://rostools.r-universe.dev'))
+```
+
+Or to install the development version from GitHub with:
 
 ``` r
 # install.packages("pak")
