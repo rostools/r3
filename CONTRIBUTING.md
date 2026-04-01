@@ -55,6 +55,21 @@ help you write a unit test, if needed).
   [Markdown syntax](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html)
   for documentation.
 
+### Admin
+
+To make it easier for participants of the R workshops to install all the
+necessary packages, we put all workshop dependencies into this r3
+package. To add new packages to the r3 package, run:
+
+``` r
+devtools::load_all()
+admin_update_deps()
+```
+
+This will add the dependencies to the `DESCRIPTION` file, as well as
+inform you to add a line to `ignore_deps_check()` in `R/workshop-deps.R`
+to avoid check warnings.
+
 ## Code of Conduct
 
 Please note that the r3 project is released with a
