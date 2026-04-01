@@ -1,6 +1,7 @@
 name: Build
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+
 on:
   pull_request:
     branches:
@@ -19,13 +20,16 @@ jobs:
     name: format-check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Install
-        uses: posit-dev/setup-air@v1
+        uses: posit-dev/setup-air@63e80dedb6d275c94a3841e15e5ff8691e1ab237 # v1.0.0
 
       - name: Check
         run: air format . --check
+
+      - name: Lint
+        uses: etiennebacher/setup-jarl@eabf7e572f2991d165059007531b9bbe2987e39c # v0.1.1
 
   cran-checks:
     runs-on: ${{ matrix.config.os }}
@@ -39,8 +43,6 @@ jobs:
           - {os: macos-latest,   r: 'release'}
           - {os: windows-latest, r: 'release'}
           - {os: ubuntu-latest,   r: 'release'}
-          # NOTE: These take a long time to run, so won't use them for regular development.
-          # For releasing, we'll use `rhub` and do the full checks there.
           # - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
           # - {os: ubuntu-latest,   r: 'oldrel-1'}
 
@@ -49,7 +51,7 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - uses: r-lib/actions/setup-r@v2
         with:
@@ -59,7 +61,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck
+          extra-packages: any::rcmdcheck, local::.
           needs: |
             check
 
