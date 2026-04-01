@@ -16,6 +16,12 @@ individual release will not have many changes within it. Below is a list
 of the releases we've made so far, along with what was changed within
 each release.
 
+## 0.6.0 (2026-04-01)
+
+### Feat
+
+- :fire: remove `install_*()` functions in favor of keeping deps in r3
+
 ## 0.5.0 (2026-02-01)
 
 ### Feat
