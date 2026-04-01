@@ -3,13 +3,24 @@
 @_default:
   just --list --unsorted
 
+@basic-checks: check-code check-spelling-cran check-spelling-typos check-url-cran check-url-lychee
 # Run build recipes and install the package
-run-all: install-deps style check-code check-spelling document build-readme check install-package
+run-all: install-deps format-r format-md document basic-checks build-readme cran-check install-package
+
+# Install the pre-commit hooks
+install-precommit:
+    # Install pre-commit hooks
+    uvx pre-commit install
+    # Run pre-commit hooks on all files
+    uvx pre-commit run --all-files
+    # Update versions of pre-commit hooks
+    uvx pre-commit autoupdate
 
 # Install package dependencies
 install-deps:
   #!/usr/bin/Rscript
   pak::pak(ask = FALSE)
+
 
 # Install the package and its dependencies
 install-package:
@@ -22,7 +33,7 @@ document:
   devtools::document()
 
 # Run style formatter
-style:
+format-r:
   air format .
 
 # Format Markdown files
@@ -33,9 +44,24 @@ format-md:
 check-code:
   jarl check .
 
-# Run spell checker
-check-spelling:
+# Run typos spell checker
+check-spelling-typos:
   uvx typos
+
+# Run typos spell checker
+check-spelling-cran:
+  #!/usr/bin/env Rscript
+  devtools::spell_check()
+
+# Check URLs based on CRAN requirements
+check-url-cran:
+  #!/usr/bin/env Rscript
+  urlchecker::url_check()
+
+# Install https://github.com/lycheeverse/lychee#installation
+# Check URLs using lychee tool
+check-url-lychee:
+  lychee . --verbose
 
 # Re-build the README file from the Rmd
 build-readme:
@@ -43,6 +69,6 @@ build-readme:
   devtools::build_readme()
 
 # Run local CRAN checks
-check:
+cran-check:
   #!/usr/bin/env Rscript
   devtools::check(error_on = "note")
