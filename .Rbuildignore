@@ -11,3 +11,6 @@
 ^.typos.toml$
 ^.cz.toml$
 ^.editorconfig$
+^.rumdl.toml$
+^.rumdl_cache$
+

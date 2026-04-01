@@ -25,6 +25,10 @@ document:
 style:
   air format .
 
+# Format Markdown files
+format-md:
+  uvx rumdl fmt --silent
+
 # Check code (lint)
 check-code:
   jarl check .
