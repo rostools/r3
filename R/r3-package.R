@@ -1,6 +1,5 @@
 #' @keywords internal
-#' @importFrom usethis ui_todo ui_line ui_done ui_oops ui_info ui_stop ui_warn
-#'   ui_field ui_value ui_path ui_code ui_code_block
+#' @importFrom usethis ui_todo ui_line ui_done ui_oops ui_info ui_stop ui_warn ui_field ui_value ui_path ui_code ui_code_block
 #' @importFrom utils tail
 "_PACKAGE"
 

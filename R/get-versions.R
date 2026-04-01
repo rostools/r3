@@ -59,7 +59,3 @@ get_allowed_rstudio_versions <- function() {
     dplyr::arrange(date) |>
     dplyr::pull(version)
 }
-
-one_year_ago <- function() {
-  lubridate::today() - lubridate::years(1)
-}

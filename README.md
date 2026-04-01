@@ -5,13 +5,13 @@
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![build](https://github.com/rostools/r3/actions/workflows/build.yaml/badge.svg)](https://github.com/rostools/r3/actions/workflows/build.yaml)
 [![R-universe
 version](https://rostools.r-universe.dev/r3/badges/version)](https://rostools.r-universe.dev/r3)
 [![r-universe
 status](https://rostools.r-universe.dev/r3/badges/checks)](https://rostools.r-universe.dev/r3)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The goal of r3 is to provide helper functions for several rostools R
