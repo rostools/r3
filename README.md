@@ -19,11 +19,11 @@ workshops.
 
 ## Installation
 
-You can install the released version of r3 from
+You can install the released version of r3 from the
 [r-universe](https://rostools.r-universe.dev/r3) with:
 
 ``` r
-install.packages("r3", repos = c('https://rostools.r-universe.dev'))
+install.packages("r3", repos = c("https://rostools.r-universe.dev", "https://cloud.r-project.org"))
 ```
 
 Or to install the development version from GitHub with:
