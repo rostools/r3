@@ -3,7 +3,7 @@
 #' The allowed versions are those that are at maximum a year old from today,
 #' sorted by the oldest first.
 #'
-#' @return A character vector of allowed R versions.
+#' @returns A character vector of allowed R versions.
 #' @export
 #'
 #' @examples
@@ -26,7 +26,7 @@ get_allowed_r_versions <- function() {
 #' The versions are those that are at a maximum one year old from today,
 #' sorted by the oldest first.
 #'
-#' @return A character vector of allowed RStudio versions.
+#' @returns A character vector of allowed RStudio versions.
 #' @export
 #'
 #' @examples

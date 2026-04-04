@@ -1,6 +1,6 @@
 #' Fix some Git remote issues that occur during the workshop.
 #'
-#' @return Used for the side effect of connecting to Git. Returns NULL invisibly.
+#' @returns Used for the side effect of connecting to Git. Returns NULL invisibly.
 #' @export
 #'
 fix_git_remotes <- function() {

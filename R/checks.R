@@ -4,7 +4,7 @@ rstudio_dl_link <- "https://posit.co/download/rstudio-desktop/#download"
 #' Runs checks on your system for R, RStudio, and Git.
 #'
 #' @name check_system
-#' @return Prints information on given check.
+#' @returns Prints information on given check.
 NULL
 
 #' @describeIn check_system Check version of R that is installed.

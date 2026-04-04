@@ -1,6 +1,6 @@
 #' Set the user's git configuration.
 #'
-#' @return Modifies global git configuration.
+#' @returns Modifies global git configuration.
 #' @export
 #'
 setup_git_config <- function() {
@@ -24,7 +24,7 @@ setup_git_config <- function() {
 
 #' Set some Git config settings like main as default and rebase as false.
 #'
-#' @return Invisible, values of previous settings.
+#' @returns Invisible, values of previous settings.
 #' @export
 #'
 setup_git_settings <- function() {
