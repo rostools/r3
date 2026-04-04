@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![build](https://github.com/rostools/r3/actions/workflows/build.yaml/badge.svg)](https://github.com/rostools/r3/actions/workflows/build.yaml)
+[![build](https://github.com/rostools/r3/actions/workflows/build.yml/badge.svg)](https://github.com/rostools/r3/actions/workflows/build.yml)
 [![R-universe
 version](https://rostools.r-universe.dev/r3/badges/version)](https://rostools.r-universe.dev/r3)
 [![r-universe
