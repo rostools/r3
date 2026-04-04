@@ -5,7 +5,7 @@
 
 @basic-checks: check-code check-spelling-cran check-spelling-typos check-url-cran check-url-lychee
 # Run build recipes and install the package
-run-all: install-deps format-r format-md document basic-checks build-readme cran-check install-package
+run-all: install-deps format-r format-md document basic-checks build-readme check-cran install-package
 
 # Install the pre-commit hooks
 install-precommit:
@@ -48,7 +48,7 @@ check-code:
 check-spelling-typos:
   uvx typos
 
-# Run typos spell checker
+# Run CRAN spell checker
 check-spelling-cran:
   #!/usr/bin/env Rscript
   devtools::spell_check()
@@ -69,6 +69,6 @@ build-readme:
   devtools::build_readme()
 
 # Run local CRAN checks
-cran-check:
+check-cran:
   #!/usr/bin/env Rscript
   devtools::check(error_on = "note")
