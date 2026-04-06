@@ -16,6 +16,12 @@ individual release will not have many changes within it. Below is a list
 of the releases we've made so far, along with what was changed within
 each release.
 
+## 0.8.0 (2026-04-06)
+
+### Feat
+
+- :sparkles: add `create_sandbox_qmd()`
+
 ## 0.7.0 (2026-04-04)
 
 ### Feat
