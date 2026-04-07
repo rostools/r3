@@ -118,11 +118,11 @@ check_project_setup_intermediate <- function() {
     )
   }
   if (
-    !(fs::file_exists(fs::path(proj, "data-raw", "nurses-stress.zip")) &
+    !(fs::file_exists(fs::path(proj, "data-raw", "nurses-stress.tar")) &
       fs::dir_exists(fs::path(proj, "data-raw", "nurses-stress")))
   ) {
     cli::cli_abort(
-      "The {.file data-raw/nurses-stress/} folder and {.file data-raw/nurses-stress.zip} don't exist. Please follow the instructions to download and unzip the dataset."
+      "The {.file data-raw/nurses-stress/} folder and {.file data-raw/nurses-stress.tar} don't exist. Please follow the instructions to download and unzip the dataset."
     )
   }
   hd_line("Show folders and files of project:")
