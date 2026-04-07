@@ -92,9 +92,9 @@ get_git_config <- function(name) {
 check_setup <- function() {
   hd_line("Checking R version:")
   check_r_version()
-  hd_line("Checking RStudio version:")
+  hd_line("\nChecking RStudio version:")
   check_rstudio_version()
-  hd_line("Checking Git config settings:")
+  hd_line("\nChecking Git config settings:")
   check_git_config()
   invisible(NULL)
 }
