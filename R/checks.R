@@ -46,9 +46,6 @@ check_rstudio_version <- function() {
     )
   }
   invisible(NULL)
-
-  # gh::gh("/repos/:owner/:repo/releases/", owner = "rstudio", repo = "rstudio")
-  # Use gh package for this..?
 }
 
 #' @describeIn check_system Checks your computer's Git config settings.
