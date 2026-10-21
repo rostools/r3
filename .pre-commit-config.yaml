@@ -3,6 +3,7 @@
 ci:
   autofix_commit_msg: "chore(pre-commit): :pencil2: automatic fixes"
   autoupdate_commit_msg: "ci(pre-commit): :construction_worker: update pre-commit CI version"
+  autoupdate_schedule: "quarterly"
 
 repos:
   - repo: https://github.com/gitleaks/gitleaks
