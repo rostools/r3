@@ -3,24 +3,20 @@
 @_default:
   just --list --unsorted
 
-@basic-checks: check-code check-spelling-cran check-spelling-typos check-url-cran check-url-lychee
+@basic-checks: check-code check-spelling check-url-cran check-url-lychee
 # Run build recipes and install the package
 run-all: install-deps format-r format-md document basic-checks build-readme check-cran install-package
 
 # Install the pre-commit hooks
 install-precommit:
-    # Install pre-commit hooks
     uvx pre-commit install
-    # Run pre-commit hooks on all files
-    uvx pre-commit run --all-files
-    # Update versions of pre-commit hooks
     uvx pre-commit autoupdate
+    uvx pre-commit run --all-files
 
 # Install package dependencies
 install-deps:
   #!/usr/bin/Rscript
   pak::pak(ask = FALSE)
-
 
 # Install the package and its dependencies
 install-package:
@@ -45,13 +41,8 @@ check-code:
   jarl check .
 
 # Run typos spell checker
-check-spelling-typos:
+check-spelling:
   uvx typos
-
-# Run CRAN spell checker
-check-spelling-cran:
-  #!/usr/bin/env Rscript
-  devtools::spell_check()
 
 # Check URLs based on CRAN requirements
 check-url-cran:
