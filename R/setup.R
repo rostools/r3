@@ -19,15 +19,23 @@ setup_git_config <- function(force = FALSE) {
     "What is your email? We recommend using a personal email or an email you will always have access to. Type out your email here: "
   )
 
-  correct <-yesno::yesno("Is your user name `", user_name, "` and email `", user_email, "`?")
+  correct <- yesno::yesno(
+    "Is your user name `",
+    user_name,
+    "` and email `",
+    user_email,
+    "`?"
+  )
   if (!correct) {
-    cli::cli_abort("Re-run {.run r3::setup_git_config()} to correctly fill out the Git config.")
+    cli::cli_abort(
+      "Re-run {.run r3::setup_git_config()} to correctly fill out the Git config."
+    )
   }
 
   usethis::use_git_config(
-    "user",
+    scope = "user",
     user.name = user_name,
-    user.email = user_email,
+    user.email = user_email
   )
   return(invisible(TRUE))
 }

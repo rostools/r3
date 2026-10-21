@@ -6,9 +6,14 @@ format: html
 
 ## Header 1
 
-```{r setup}
+```{r}
+#| label: setup
 #| include: false
+
+library(tidyverse)
 ```
+
+Can write normal text here.
 
 ```{r}
 # Code chunk
