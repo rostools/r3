@@ -16,6 +16,15 @@ individual release will not have many changes within it. Below is a list
 of the releases we've made so far, along with what was changed within
 each release.
 
+## 0.8.4 (2026-10-21)
+
+### Refactor
+
+- 🚨 updates when running linter/formatter
+- ♻️ replace use of `showPrompt()`, closes #30
+- ♻️ remove dependency on `getActiveProject()`
+- ♻️ simplify and split up getting and checking Git config
+
 ## 0.8.3 (2026-04-07)
 
 ### Fix
