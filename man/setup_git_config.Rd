@@ -4,7 +4,10 @@
 \alias{setup_git_config}
 \title{Set the user's git configuration.}
 \usage{
-setup_git_config()
+setup_git_config(force = FALSE)
+}
+\arguments{
+\item{force}{Force setting up Git config and overwrite the old values.}
 }
 \value{
 Modifies global git configuration.
