@@ -51,32 +51,39 @@ check_rstudio_version <- function() {
 #' @describeIn check_system Checks your computer's Git config settings.
 #' @export
 check_git_config <- function() {
-  git_config_values <- list(
-    name = get_git_config("user.name"),
-    email = get_git_config("user.email")
-  )
-  git_config_values <- Filter(function(f) length(f) > 0, git_config_values)
+  config <- get_git_user_config()
+  config_set <- has_git_config(config)
 
-  if (length(git_config_values) == 0) {
-    ui_oops("Your name and email aren't configured in Git.")
-    ui_todo("Please paste and run the below code in the RStudio Console.")
-    ui_code_block("r3::setup_git_config()")
-  } else if (length(git_config_values) == 1) {
-    ui_oops("Your {names(git_config_values)} isn't configured in Git.")
-    ui_todo("Please paste and run the below code in the RStudio Console.")
-    ui_code_block("r3::setup_git_config()")
-  } else {
-    ui_done(
+  if (!config_set) {
+    cli::cli_abort(
       c(
-        "Your Git configuration is all setup!",
-        "Git now knows that:",
-        "- Your name is {ui_value(git_config_values$name)}",
-        "- Your email is {ui_value(git_config_values$email)}"
+        "Your name and/or email aren't configured in Git.",
+        "*" = "Paste and run this code in the RStudio Console (or click to run): {.run r3::setup_git_config()}"
       )
     )
   }
+  cli::cli_bullets(
+    c(
+      "Your Git configuration is all setup! Git knows that:",
+      "*" = "Your name is {ui_value(config$name)}",
+      "*" = "Your email is {ui_value(config$email)}"
+    )
+  )
 
   invisible(NULL)
+}
+
+# Whether both user and email are set.
+has_git_config <- function(config) {
+  !all(length(config) == 0, length(config) == 1)
+}
+
+get_git_user_config <- function() {
+  list(
+    name = get_git_config("user.name"),
+    email = get_git_config("user.email")
+  ) |>
+    purrr::keep(\(f) length(f) > 0)
 }
 
 get_git_config <- function(name) {
