@@ -47,7 +47,8 @@ Imports:
     utils,
     vroom,
     withr,
-    xml2
+    xml2,
+    yesno
 Suggests:
     knitr,
     pak,
@@ -60,5 +61,5 @@ URL: https://github.com/rostools/r3
 BugReports: https://github.com/rostools/r3/issues
 X-schema.org-keywords: reproducibility, training, education, workshop,
   open educational resource
-Config/roxygen2/version: 7.3.3.9000
+Config/roxygen2/version: 8.1.1
 Language: en-US

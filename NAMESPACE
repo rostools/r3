@@ -15,16 +15,18 @@ export(get_allowed_r_versions)
 export(get_allowed_rstudio_versions)
 export(setup_git_config)
 export(setup_git_settings)
-importFrom(usethis,ui_code)
-importFrom(usethis,ui_code_block)
-importFrom(usethis,ui_done)
-importFrom(usethis,ui_field)
-importFrom(usethis,ui_info)
-importFrom(usethis,ui_line)
-importFrom(usethis,ui_oops)
-importFrom(usethis,ui_path)
-importFrom(usethis,ui_stop)
-importFrom(usethis,ui_todo)
-importFrom(usethis,ui_value)
-importFrom(usethis,ui_warn)
+importFrom(usethis,
+  ui_code,
+  ui_code_block,
+  ui_done,
+  ui_field,
+  ui_info,
+  ui_line,
+  ui_oops,
+  ui_path,
+  ui_stop,
+  ui_todo,
+  ui_value,
+  ui_warn
+)
 importFrom(utils,tail)
