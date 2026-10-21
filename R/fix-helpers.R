@@ -4,12 +4,8 @@
 #' @export
 #'
 fix_git_remotes <- function() {
-  proj <- rstudioapi::getActiveProject()
-  if (is.null(proj)) {
-    usethis::ui_stop(
-      "You aren't in the R project. Please open the R Project for the workshop and run this function again in the Console."
-    )
-  }
+  proj <- fs::path_wd()
+  check_in_rproj(proj)
   remotes <- gert::git_remote_list(proj)$name
   purrr::walk(
     remotes,

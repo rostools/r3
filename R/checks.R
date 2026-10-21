@@ -115,12 +115,8 @@ hd_line <- function(name) {
 #' @describeIn check_system Check your project setup for the files and folders created.
 #' @export
 check_project_setup_intermediate <- function() {
-  proj <- rstudioapi::getActiveProject()
-  if (is.null(proj)) {
-    usethis::ui_stop(
-      "You aren't in the R project. Please open the R Project for the workshop and run this function again in the Console."
-    )
-  }
+  proj <- fs::path_wd()
+  check_in_rproj(proj)
   if (
     !(fs::file_exists(fs::path(proj, "data-raw", "nurses-stress.tar")) &
       fs::dir_exists(fs::path(proj, "data-raw", "nurses-stress")))
@@ -141,12 +137,8 @@ check_project_setup_intermediate <- function() {
 #'   for the files and folders created during the pre-workshop tasks.
 #' @export
 check_project_setup_advanced <- function() {
-  proj <- rstudioapi::getActiveProject()
-  if (is.null(proj)) {
-    cli::cli_abort(
-      "You aren't in the R project. Please open the R Project for the workshop and run this function again in the Console."
-    )
-  }
+  proj <- fs::path_wd()
+  check_in_rproj(proj)
   if (
     !(fs::file_exists(fs::path(proj, "data-raw", "nmr-omics.R")) &
       fs::dir_exists(fs::path(proj, "data-raw", "nmr-omics")) &
@@ -166,4 +158,16 @@ check_project_setup_advanced <- function() {
 
 one_year_ago <- function() {
   lubridate::today() - lubridate::years(1)
+}
+
+# Whether working directory is in an R Project
+check_in_rproj <- function(path) {
+  rproj_path <- path |>
+    fs::dir_ls(glob = "*.Rproj")
+
+  if (is.null(rproj_path) || length(rproj_path) == 0) {
+    cli::cli_abort(
+      "You aren't in the R project. Please open the R Project for the workshop and run this function again in the Console."
+    )
+  }
 }
