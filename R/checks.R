@@ -140,12 +140,11 @@ check_project_setup_advanced <- function() {
   proj <- fs::path_wd()
   check_in_rproj(proj)
   if (
-    !(fs::file_exists(fs::path(proj, "data-raw", "nmr-omics.R")) &
-      fs::dir_exists(fs::path(proj, "data-raw", "nmr-omics")) &
-      fs::file_exists(fs::path(proj, "data", "lipidomics.csv")))
+    !(fs::file_exists(fs::path(proj, "data-raw", "cv-risk.R")) &
+      fs::file_exists(fs::path(proj, "data", "cv-risk.csv")))
   ) {
     cli::cli_abort(
-      "The folder {.path data-raw/nmr-omics/} and files {.path data-raw/nmr-omics.R} and {.path data/lipidomics.csv} don't exist. Please follow the instructions to download and process the dataset."
+      "The files {.path data-raw/cv-risk.R} and {.path data/cv-risk.csv} don't exist. Please follow the instructions to download and save the dataset."
     )
   }
   hd_line("Show folders and files of project:")
