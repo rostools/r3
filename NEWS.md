@@ -16,6 +16,12 @@ individual release will not have many changes within it. Below is a list
 of the releases we've made so far, along with what was changed within
 each release.
 
+## 0.8.5 (2026-10-25)
+
+### Refactor
+
+- ♻️ switch to use `cv-risk` dataset for advanced workshop
+
 ## 0.8.4 (2026-10-21)
 
 ### Refactor
