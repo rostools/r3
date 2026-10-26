@@ -24,6 +24,12 @@ create_sandbox_qmd <- function() {
   create_common_qmd("sandbox.qmd")
 }
 
+#' @describeIn create_qmd Create a `report.qmd` file in the `docs/` folder.
+#' @export
+create_report_qmd <- function() {
+  create_common_qmd("report.qmd")
+}
+
 create_common_qmd <- function(output_file = "basic.qmd") {
   proj <- usethis::proj_path()
   if (is.null(proj)) {

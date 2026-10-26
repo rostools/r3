@@ -5,6 +5,7 @@
 \alias{create_learning_qmd}
 \alias{create_cleaning_qmd}
 \alias{create_sandbox_qmd}
+\alias{create_report_qmd}
 \title{Create document in the \verb{docs/} folder.}
 \usage{
 create_learning_qmd()
@@ -12,6 +13,8 @@ create_learning_qmd()
 create_cleaning_qmd()
 
 create_sandbox_qmd()
+
+create_report_qmd()
 }
 \value{
 Creates a Quarto Markdown document in the \verb{docs/} folder.
@@ -26,5 +29,7 @@ Make a draft of a Quarto document to use for the workshops.
 \item \code{create_cleaning_qmd()}: Create a \code{cleaning.qmd} file in the \verb{docs/} folder.
 
 \item \code{create_sandbox_qmd()}: Create a \code{sandbox.qmd} file in the \verb{docs/} folder.
+
+\item \code{create_report_qmd()}: Create a \code{report.qmd} file in the \verb{docs/} folder.
 
 }}
